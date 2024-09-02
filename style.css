@@ -3,6 +3,11 @@
     src: url("./fonts/Unbounded/Unbounded-VariableFont_wght.ttf");
 }
 
+@font-face {
+    font-family: TTTravels;
+    src: url("./fonts/TTTravels/TTTravels-Regular.ttf");
+}
+
 * {
     --text-color: #ffffff;
     --bg-color: #27174D;
@@ -256,11 +261,100 @@ header {
     background-color: transparent;
 }
 
+/* Согласие с cookie */
+
+.intro__cookie {
+    position: absolute;
+
+    padding: 48px 32px;
+
+    display: flex;
+    flex-wrap: nowrap;
+
+    margin: 0 24px;
+
+    border-radius: 10px;
+    border: 2px solid var(--bg-color);
+
+    font-size: 24px;
+
+    background-color: var(--text-color);
+
+    bottom: 0;
+}
+
+.intro__cookie__text {
+    font-family: TTTravels;
+    flex-grow: 1;
+
+    font-weight: 400;
+    color: #000000;
+}
+
+.intro__cookie__text a {
+    font-family: TTTravels;
+    color: #4E23F0;
+
+    text-decoration: underline;
+}
+
+.intro__cookie__button {
+    font-family: TTTravels;
+
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    margin-left: 5px;
+
+    font-weight: 400;
+
+    padding: 10px;
+
+    border-radius: 30px;
+    border: 1px solid var(--bg-color);
+
+    color: var(--text-color);
+    background-color: var(--bg-color);
+
+    cursor: pointer;
+}
+
+.intro__cookie__button:hover {
+    background-color: #1E1E1E;
+}
+
 /* Раздел "О нас" */
 
 .company {
-    height: 1019px;
+    padding: 64px 80px;
+
     background-color: var(--bg-color);
+    color: var(--text-color);
+
+    font-size: 24px;
+}
+
+.company__title {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.company__subtitle {
+    font-weight: 400;
+    padding: 32px 0 64px;
+}
+
+.company__images {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company__image {
+    width: 32%;
+    height: 429px;
+    object-fit: cover;
 }
 
 /* Раздел "Почему мы" */
@@ -302,7 +396,6 @@ header {
 .advantage__title {
     font-size: 24px;
     font-weight: 500;
-
 }
 
 .advantage__text {
@@ -968,6 +1061,8 @@ header {
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 16px;
+
+    text-align: left;
 }
 
 .reviews__card__auto {
