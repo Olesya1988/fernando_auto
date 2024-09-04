@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../normalize.css">
+    <link rel="stylesheet" href="./calculator.css">    
+    <title>Fernando Auto || Calculator</title>
+</head>
+<body>
+    <div id="root">
+        <!-- Header -->
+        <header>
+            <ul class="location">
+                <li class="location__item"><img class="location__img" src="../../images/location_dark.svg" alt="location-image"></img></li>
+                <li class="location__item"><div class="location__text">Москва</div></li>
+                
+            </ul>
+            <ul class="top-menu">
+                <li class="top-menu__item"><a class="top-menu__item__link" href="#">О нас</a></li>
+                <li class="top-menu__item"><a class="top-menu__item__link" href="#">Калькулятор</a></li>
+                <li class="top-menu__item"><a class="top-menu__item__link" href="#">Контакты</a></li>
+                <li class="top-menu__item"><a class="top-menu__item__link" href="#">Отзывы</a></li>
+            </ul>
+            <ul class="socials">
+                <li class="socials__item">
+                    <a class="socials__item__link" href="#">
+                        <img class="socials__item__img" src="../../images/telegram_dark.svg" alt="telegram-icon">
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a class="socials__item__link" href="#">
+                        <img class="socials__item__img" src="../../images/instagram_dark.svg" alt="instagram-icon">
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a class="socials__item__link" href="#">
+                        <img class="socials__item__img" src="../../images/youtube_dark.svg" alt="youtube-icon">
+                    </a>
+                </li>
+            </ul>
+            <a class="logo__link" href="#"><img class="logo__img" src="../../images/logo_dark.svg" alt="Логотип компании Fernando Auto"></img></a>            
+            <button type="submit" class="feedback write">Написать нам</button>
+        </header>
+        <main>
+            <!-- Раздел с калькулятором -->
+            <section class="calculator">
+                <div class="calculator__title">
+                    <div class="calculator__title__item">калькулятор авто с аукциона</div>
+                    <div class="calculator__title__item country">японии</div>
+                    <div class="calculator__title__item">под полную пошлину</div>
+                </div>
+                <div class="calculator__description">
+                    Заполните поля ниже и калькулятор рассчитает среднюю стоимость авто с аукциона Японии под полную пошлину с учётом доставки до вашего города.
+                    Автомобили 2007 года и старше запрещены к ввозу под полную пошлину с выдачей ПТС.<br>
+                    Такие автомобили ввозятся как запчасти либо под ваш ПТС — для этого у нас есть отдельный калькулятор распилы/конструктора.
+                </div>
+                <div class="calculator__content">
+                    <div class="calculator__data">
+                        <div class="calculator__data__item">
+                            <div class="calculator__data__item__title">Аукционная стоимость (иены)</div>
+                            <input class="calculator__data__item__value">
+                        </div>
+                        <div class="calculator__data__item">
+                            <div class="calculator__data__item__title">Тип клиента</div>
+                            <select class="calculator__data__item__value">
+                                <option value="Физическое лицо">Физическое лицо</option>
+                                <option value="Юридическое лицо">Юридическое лицо</option>
+                            </select>
+                        </div>
+                        <div class="calculator__data__item">
+                            <div class="calculator__data__item__title">Тип топлива</div>
+                            <select class="calculator__data__item__value">
+                                <option value="Бензин">Бензин</option>
+                                <option value="Дизель">Дизель</option>
+                                <option value="Турбодизель">Турбодизель</option>
+                                <option value="Электрический мотор">Электрический мотор</option>
+                            </select>
+                        </div>
+                        <div class="calculator__data__item">
+                            <div class="calculator__data__item__title">Год выпуска</div>
+                            <input class="calculator__data__item__value">
+                        </div>
+                        <div class="calculator__data__item">
+                            <div class="calculator__data__item__title">Объем (куб. см)</div>
+                            <input class="calculator__data__item__value">
+                        </div>
+                        <div class="calculator__data__item">
+                            <div class="calculator__data__item__title">Мощность</div>
+                            <input class="calculator__data__item__value">
+                        </div>
+                        <button type="submit" class="calculator__button">Рассчитать</button>
+                    </div>
+                    
+                    <div class="calculator__result"></div>
+                </div>
+            </section>
+            
+        </main>
+        <!-- Footer --> 
+        <footer>
+            <a class="footer__logo__link" href="#">
+                <img class="footer__logo__img" src="../../images/logo_dark.svg" alt="Логотип компании Fernando Auto"></img>
+            </a>
+            <ul class="footer-menu">
+                <li class="footer-menu__item"><a class="footer-menu__item__link" href="#">О нас</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__item__link" href="#">Калькулятор</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__item__link" href="#">Контакты</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__item__link" href="#">Отзывы</a></li>
+            </ul>
+            <ul class="footer__socials">
+                <li class="footer__socials__item">
+                    <a class="footer__socials__item__link" href="#">
+                        <img class="footer__socials__item__img" src="../../images/telegram_dark.svg" alt="telegram-icon">
+                    </a>
+                </li>
+                <li class="footer__socials__item">
+                    <a class="footer__socials__item__link" href="#">
+                        <img class="footer__socials__item__img" src="../../images/instagram_dark.svg" alt="instagram-icon">
+                    </a>
+                </li>
+                <li class="footer__socials__item">
+                    <a class="footer__socials__item__link" href="#">
+                        <img class="footer__socials__item__img" src="../../images/youtube_dark.svg" alt="youtube-icon">
+                    </a>
+                </li>
+            </ul>
+            <div class="footer__license">© Fernando Auto 2024
+                Все права защищены</div>
+            <button type="submit" class="footer__button write">Написать нам</button>
+            <div class="footer__confidentiality"><a class="footer__confidentiality__link" href="#">Политика конфиденциальности</a></div>
+        </footer>
+    </div>    
+
+      <!-- Задать вопрос -->
+    <div class="popup2 hidden">
+        <div class="popup2__container">
+          <button class="popup2__close" type="submit">
+            <span class="visually-hidden">Кнопка закрытия окна</span>
+          </button>          
+          <form class="popup2__content">
+            <label>
+              <input
+                type="text"
+                name="name"
+                class="popup2__content__item name"
+                placeholder="ФИО"
+              />
+            </label>
+            <label>
+              <input
+                type="text"
+                name="phone"
+                class="popup2__content__item phone"
+                placeholder="+7 999 999 99 99"
+              />
+            </label>
+            <label>                
+                <input
+                  type="text"
+                  name="email"
+                  class="popup2__content__item email"
+                  placeholder="Email"
+                />
+              </label>
+              <label>
+                <span>Напишите свой вопрос в поле ниже</span>
+                <textarea
+                  type="text"
+                  name="details"
+                  class="popup2__content__item details"
+                  placeholder="Комментарий"
+                ></textarea>
+              </label>
+            <button class="popup2__button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    <script src="./index.js"></script>        
+</body>
+</html>
