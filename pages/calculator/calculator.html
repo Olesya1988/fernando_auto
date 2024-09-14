@@ -63,20 +63,20 @@
                         </div>
                         <div class="calculator__data__item client-types">
                             <div class="calculator__data__item__title">Тип клиента</div>
-                            <div class="calculator__data__item__value">Физическое лицо</div>
-                            <ul class="client-types__list">
+                            <div class="calculator__data__item__value client-types-toggle">Физическое лицо</div>
+                            <ul class="client-types__list hidden">
                                 <li class="client-type">Физическое лицо</li>
                                 <li class="client-type">Юридическое лицо</li>
                             </ul>                            
                             <div class="arrows">
-                                <img class="arrow arrow__down" src="../../images/arrow_down.svg" alt="Стрелка вниз">
-                                <img class="arrow arrow__up hidden" src="../../images/arrow_up.svg" alt="Стрелка вверх">
+                                <img class="arrow client-type__arrow__down" src="../../images/arrow_down.svg" alt="Стрелка вниз">
+                                <img class="arrow client-type__arrow__up hidden" src="../../images/arrow_up_dark.svg" alt="Стрелка вверх">
                             </div>
                         </div>
                         <div class="calculator__data__item fuel-types">
                             <div class="calculator__data__item__title">Тип топлива</div>
-                            <div class="calculator__data__item__value">Бензин</div>
-                            <div class="fuel-types__container">
+                            <div class="calculator__data__item__value fuel-types-toggle">Бензин</div>
+                            <div class="fuel-types__container hidden">
                                 <input class="fuel-types__search" type="text">
                                 <img class="search__img" src="../../images/search.svg" alt="search image">
                                 <ul class="fuel-types__list">
@@ -88,8 +88,8 @@
                             </div>
                             
                             <div class="arrows">
-                                <img class="arrow arrow__down" src="../../images/arrow_down.svg" alt="Стрелка вниз">
-                                <img class="arrow arrow__up hidden" src="../../images/arrow_up.svg" alt="Стрелка вверх">
+                                <img class="arrow fuel-type__arrow__down" src="../../images/arrow_down.svg" alt="Стрелка вниз">
+                                <img class="arrow fuel-type__arrow__up hidden" src="../../images/arrow_up_dark.svg" alt="Стрелка вверх">
                             </div>
                         </div>
                         <div class="calculator__data__item">
@@ -107,7 +107,79 @@
                         <button type="submit" class="calculator__button">Рассчитать</button>
                     </div>
                     
-                    <div class="calculator__result"></div>
+                    <div class="calculator__result">
+                        <div class="calculator__result__item exchange-rate">
+                            <div class="calculator__result__item__title">Курс валют ЦБ на сегодня:</div>
+                            <div class="calculator__result__item__value">1 $ - 91,2573 ₽100 ¥
+                                100 ¥ - 58,3412 ₽</div>                        
+                        </div>
+                        <div class="calculator__result__item average-cost">
+                            <div class="calculator__result__item__title">Средняя стоимость автомобиля во Владивостоке со всеми расходами:</div>
+                            <div class="calculator__result__item__value">419 352 ₽</div>                        
+                        </div>
+                        <div class="calculator__result__item auction-price">
+                            <div class="calculator__result__item__title">Стоимость на аукционе:
+                                <span>В зависимости от дальности аукциона</span>
+                            </div>
+                            <div class="calculator__result__item__value">120 600 ₽
+                                200 000 ¥</div>                        
+                        </div>
+                        <div class="calculator__result__item average-expenses">
+                            <div class="calculator__result__item__title">Средние расходы 
+                                по Японии</div>
+                            <div class="calculator__result__item__value">48 240 ₽
+                                80 000 ¥</div>                        
+                        </div>
+                        <div class="calculator__result__item freight-fee">
+                            <div class="calculator__result__item__title">Фрахт до Владивостока
+                                <span>Морская перевозка</span>
+                            </div>
+                            <div class="calculator__result__item__value">48 240 ₽
+                                80 000 ¥</div>                        
+                        </div>
+                        <div class="calculator__result__item customs-clearance">
+                            <div class="calculator__result__item__title">Таможенное оформление
+                                <ul>
+                                    <li>Разгрузка + нормативное хранение на складе (СВХ)</li>
+                                    <li>Прохождение лаборатории - СБКТС, ЭПТС</li>
+                                    <li>Услуга таможенного брокера</li>
+                                </ul>
+                            </div>
+                            <div class="calculator__result__item__value">82 000 ₽</div>                        
+                        </div>
+                        <div class="calculator__result__item company-fee">
+                            <div class="calculator__result__item__title">Комиссия компании Fernando Auto</div>
+                            <div class="calculator__result__item__value">50 000 ₽</div>                        
+                        </div>
+                        <div class="calculator__result__item laboratory-fee">
+                            <div class="calculator__result__item__title">Перемещение авто из порта с прохождением лаборатории</div>
+                            <div class="calculator__result__item__value">5 000 ₽</div>                        
+                        </div>
+                        <div class="calculator__result__item customs-fee">
+                            <div class="calculator__result__item__title">Таможенные платежи:
+                                <ul>
+                                    <li>Сборы за таможенное оформление: 775 ₽</li>                                      </li>
+                                    <li>Пошлина (на физ.лицо): 59 297 ₽</li>                                    
+                                </ul>
+                            </div>
+                            <div class="calculator__result__item__value">60 072 ₽</div>                        
+                        </div>
+                        <div class="calculator__result__item utilization-fee">
+                            <div class="calculator__result__item__title">Утилизационный сбор:</div>
+                            <div class="calculator__result__item__value">5 200 ₽</div>                        
+                        </div>
+                        <div class="calculator__result__item total">
+                            <div class="calculator__result__item__title">Итого:</div>
+                            <div class="calculator__result__item__value">419 352 ₽</div>                        
+                        </div>  
+                        <div class="calculator__result__item comment">
+                            <ul>
+                                <li>Уважаемые Заказчики! Представленный расчет является ориентировочным и может отличаться от конечной суммы по прибытию автомобиля, ввиду волатильности курсов, а также плавающих тарифов на перевозку, СВХ, услуги брокера.</li>
+                                                              
+                            </ul>
+                                               
+                        </div>                      
+                    </div>
                 </div>
             </section>
             
@@ -191,6 +263,6 @@
           </form>
         </div>
       </div>
-    <script src="./index.js"></script>        
+    <script src="./calculator.js"></script>        
 </body>
 </html>

@@ -182,7 +182,7 @@ header {
 
 /* Раздел с калькулятором */
 .calculator {
-  padding: 112px 80px;
+  padding: 112px 80px 0;
 }
 
 .calculator__title {
@@ -205,10 +205,13 @@ header {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  gap: 45px;
 }
 
 .calculator__data {
-  width: 49%;
+  width: calc(100% / 2 - 45px);
+
+  height: 338px;
 
   display: flex;
   flex-wrap: wrap;
@@ -218,6 +221,7 @@ header {
 
 .calculator__data__item {
   width: 48%;
+
   margin-bottom: 32px;
   position: relative;
 }
@@ -343,6 +347,82 @@ header {
   width: 48%;
 
   cursor: pointer;
+}
+
+.calculator__result {
+  font-family: Unbounded;
+  font-size: 20px;
+  font-weight: 300;
+  width: 50%;
+  color: #1e1e1e;
+}
+
+.calculator__result__item {
+  display: flex;
+  flex-wrap: nowrap;
+  /* justify-content: space-between; */
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid #878787;
+}
+
+.calculator__result__item__title {
+  width: calc(100% - 20px - 21%);
+}
+
+.calculator__result__item__value {
+  width: 21%;
+  text-align: right;
+}
+
+.exchange-rate,
+.total,
+.comment {
+  border: none;
+}
+.exchange-rate .calculator__result__item__title {
+  width: 50%;
+}
+
+.exchange-rate .calculator__result__item__value {
+  width: 50%;
+}
+
+.calculator__result__item ul {
+  font-family: Unbounded;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 24px;
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+.calculator__result__item span {
+  display: block;
+  font-family: Unbounded;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 24px;
+}
+.calculator__result__item li {
+  list-style-type: disc;
+}
+
+.total .calculator__result__item__title {
+  width: 70px;
+}
+
+.total .calculator__result__item__value {
+  font-weight: 400;
+  width: 200px;
+  text-align: left;
+}
+
+.comment {
+  font-family: Unbounded;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0;
 }
 
 /* Footer */
