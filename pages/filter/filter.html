@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../normalize.css">
+    <link rel="stylesheet" href="./filter.css">
+    <title>Fernando Auto || Показать варианты</title>
+</head>
+
+<body>
+    <div id="root">
+        <!-- Header -->
+        <header>
+            <ul class="location">
+                <li class="location__item"><img class="location__img" src="../../images/location_dark.svg"
+                        alt="location-image"></img></li>
+                <li class="location__item">
+                    <div class="location__text">Москва</div>
+                </li>
+
+            </ul>
+            <ul class="top-menu">
+                <li class="top-menu__item"><a class="top-menu__item__link" href="../../index.html">О нас</a></li>
+                <li class="top-menu__item"><a class="top-menu__item__link" href="../calculator/calculator.html">Калькулятор</a></li>
+                <li class="top-menu__item"><a class="top-menu__item__link" href="../../index.html">Контакты</a></li>
+                <li class="top-menu__item"><a class="top-menu__item__link" href="../reviews/reviews.html">Отзывы</a></li>
+            </ul>
+            <ul class="socials">
+                <li class="socials__item">
+                    <a class="socials__item__link" href="#">
+                        <img class="socials__item__img" src="../../images/telegram_dark.svg" alt="telegram-icon">
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a class="socials__item__link" href="#">
+                        <img class="socials__item__img" src="../../images/instagram_dark.svg" alt="instagram-icon">
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a class="socials__item__link" href="#">
+                        <img class="socials__item__img" src="../../images/youtube_dark.svg" alt="youtube-icon">
+                    </a>
+                </li>
+            </ul>
+            <a class="logo__link" href="../../index.html"><img class="logo__img" src="../../images/logo_dark.svg"
+                    alt="Логотип компании Fernando Auto"></img></a>
+            <button type="submit" class="feedback write">Написать нам</button>
+        </header>
+        <main>
+            <!-- Раздел "Раздел с фильтром" -->
+            <section class="filter">
+                <div class="filter__title">
+                    <div class="filter__title__item">стоимость авто из </div>
+                    <div class="filter__title__item choose__country">японии</div>
+                    <div class="filter__title__item filter__arrows">
+                        <img class="filter__arrow country__arrow__down" src="../../images/arrow_down.svg"
+                            alt="Стрелка вниз">
+                        <img class="filter__arrow hidden country__arrow__up" src="../../images/arrow_up.svg"
+                            alt="Стрелка вверх">
+                    </div>
+                    <ul class="countries__list hidden"></ul>
+                </div>
+                <form class="filter__form">
+                    <div class="filter__item brands">
+                        <div class="filter__item__title">Марка</div>
+                        <div class="filter__item__content brands__content">
+                            <div class="filter__text brand__text">Все марки</div>
+                            <div class="filter__arrows">
+                                <img class="filter__arrow brand__arrow__down" src="../../images/arrow_down.svg"
+                                    alt="Стрелка вниз">
+                                <img class="filter__arrow hidden brand__arrow__up" src="../../images/arrow_up_dark.svg"
+                                    alt="Стрелка вверх">
+                            </div>
+                            <div class="brands__container hidden">
+                                <input class="brands__search" type="text">
+                                <img class="brands__search__img" src="../../images/search.svg" alt="search image">
+                                <ul class="brands__list"></ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="filter__item models">
+                        <div class="filter__item__title">Модель</div>
+                        <div class="filter__item__content models__content">
+                            <div class="filter__text model__text">Все модели</div>
+                            <div class="filter__arrows">
+                                <img class="filter__arrow model__arrow__down" src="../../images/arrow_down.svg"
+                                    alt="Стрелка вниз">
+                                <img class="filter__arrow hidden model__arrow__up" src="../../images/arrow_up_dark.svg"
+                                    alt="Стрелка вверх">
+                            </div>
+                            <ul class="models__list hidden"></ul>
+                        </div>
+                    </div>
+                    <label class="filter__item">
+                        <h5 class="filter__item__title">Год выпуска</h5>
+                        <div class="filter__item__inputs">
+                            <input class="filter__item__input" type="text" placeholder="От">
+                            <input class="filter__item__input" type="text" placeholder="До">
+                        </div>
+                    </label>
+                    <label class="filter__item">
+                        <h5 class="filter__item__title">Цена</h5>
+                        <div class="filter__item__inputs">
+                            <input class="filter__item__input" type="text" placeholder="От">
+                            <input class="filter__item__input" type="text" placeholder="До">
+                        </div>
+                    </label>
+                    <div class="filter__item fuel-types">
+                        <div class="filter__item__title">Тип двигателя</div>
+                        <div class="filter__item__content fuel-types-toggle">Все двигатели</div>
+                        <div class="fuel-types__container hidden">
+                            <input class="fuel-types__search" type="text">
+                            <img class="search__img" src="../../images/search.svg" alt="search image">
+                            <ul class="fuel-types__list">
+                                <li class="fuel-type">Все двигатели</li>
+                                <li class="fuel-type">Бензиновый двигатель</li>
+                                <li class="fuel-type">Дизельный двигатель</li>
+                                <li class="fuel-type">Турбодизель</li>
+                                <li class="fuel-type">Электрические моторы</li>
+                            </ul>
+                        </div>
+
+                        <div class="arrows">
+                            <img class="arrow fuel-type__arrow__down" src="../../images/arrow_down.svg"
+                                alt="Стрелка вниз">
+                            <img class="arrow fuel-type__arrow__up hidden" src="../../images/arrow_up_dark.svg"
+                                alt="Стрелка вверх">
+                        </div>
+                    </div>
+                    <div class="filter__item drive">
+                        <div class="filter__item__title">Привод</div>
+                        <div class="filter__item__content drive-types-toggle">Все приводы</div>
+                        <div class="drive-types__container hidden">
+                            <input class="drive-types__search" type="text">
+                            <img class="search__img" src="../../images/search.svg" alt="search image">
+                            <ul class="drive-types__list">
+                                <li class="drive-type">Все приводы</li>
+                                <li class="drive-type">Передний привод</li>
+                                <li class="drive-type">Задний привод</li>
+                                <li class="drive-type">Полный привод</li>
+                            </ul>
+                        </div>
+                        <div class="arrows">
+                            <img class="arrow drive-type__arrow__down" src="../../images/arrow_down.svg"
+                                alt="Стрелка вниз">
+                            <img class="arrow drive-type__arrow__up hidden" src="../../images/arrow_up_dark.svg"
+                                alt="Стрелка вверх">
+                        </div>
+                    </div>
+                    <button class="filter__button">Поиск</button>
+                </form>
+                <div class="fiter__goods">
+                    <div class="goods__card">
+                        <div class="goods__card__rating">
+                            <img class="goods__card__rating__img" src="../../images/star.svg" alt="star">
+                            <div class="goods__card__rating__value">4</div>
+                        </div>
+                        <img class="goods__card__img" src="../../images/filter_goods1.svg" alt="auto image">
+                        <div class="goods__card__title"><span class="goods__card__title__model">toyota rav4</span> |
+                            <span class="goods__card__title__year">2021 г.</span>
+                        </div>
+                        <div class="goods__card__subtitle">toyota rav4</div>
+                        <div class="goods__card__properties">
+                            <div class="goods__card__propertie">2,0 л.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">149 л.с.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Бензин</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Полный</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">23 000 км</div>
+                        </div>
+                        <div class="goods__card__footer">
+                            <div class="goods__card__price">3 491 000 ₽</div>
+                            <a href="../auto/auto.html"><button class="goods__card__about">Подробнее</button></a>
+                        </div>
+                    </div>
+                    <div class="goods__card">
+                        <div class="goods__card__rating">
+                            <img class="goods__card__rating__img" src="../../images/star.svg" alt="star">
+                            <div class="goods__card__rating__value">4</div>
+                        </div>
+                        <img class="goods__card__img" src="../../images/filter_goods2.svg" alt="auto image">
+                        <div class="goods__card__title"><span class="goods__card__title__model">honda cr-v</span> |
+                            <span class="goods__card__title__year">2023 г.</span>
+                        </div>
+                        <div class="goods__card__subtitle">honda cr-v</div>
+                        <div class="goods__card__properties">
+                            <div class="goods__card__propertie">2,0 л.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">204 л.с.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Гибрид</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Полный</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">35 000 км</div>
+                        </div>
+                        <div class="goods__card__footer">
+                            <div class="goods__card__price">5 805 000 ₽</div>
+                            <a href="../auto/auto.html"><button class="goods__card__about">Подробнее</button></a>
+                        </div>
+                    </div>
+                    <div class="goods__card">
+                        <div class="goods__card__rating">
+                            <img class="goods__card__rating__img" src="../../images/star.svg" alt="star">
+                            <div class="goods__card__rating__value">4</div>
+                        </div>
+                        <img class="goods__card__img" src="../../images/filter_goods3.svg" alt="auto image">
+                        <div class="goods__card__title"><span class="goods__card__title__model">honda fit</span> |
+                            <span class="goods__card__title__year">2020 г.</span>
+                        </div>
+                        <div class="goods__card__subtitle">honda fit</div>
+                        <div class="goods__card__properties">
+                            <div class="goods__card__propertie">1,3 л.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">98 л.с.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Бензин</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Полный</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">101 000 км</div>
+                        </div>
+                        <div class="goods__card__footer">
+                            <div class="goods__card__price">1 490 000 ₽</div>
+                            <a href="../auto/auto.html"><button class="goods__card__about">Подробнее</button></a>
+                        </div>
+                    </div>
+                    <div class="goods__card">
+                        <div class="goods__card__rating">
+                            <img class="goods__card__rating__img" src="../../images/star.svg" alt="star">
+                            <div class="goods__card__rating__value">4</div>
+                        </div>
+                        <img class="goods__card__img" src="../../images/filter_goods1.svg" alt="auto image">
+                        <div class="goods__card__title"><span class="goods__card__title__model">toyota rav4</span> |
+                            <span class="goods__card__title__year">2021 г.</span>
+                        </div>
+                        <div class="goods__card__subtitle">toyota rav4</div>
+                        <div class="goods__card__properties">
+                            <div class="goods__card__propertie">2,0 л.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">149 л.с.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Бензин</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Полный</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">23 000 км</div>
+                        </div>
+                        <div class="goods__card__footer">
+                            <div class="goods__card__price">3 491 000 ₽</div>
+                            <a href="../auto/auto.html"><button class="goods__card__about">Подробнее</button></a>
+                        </div>
+                    </div>
+                    <div class="goods__card">
+                        <div class="goods__card__rating">
+                            <img class="goods__card__rating__img" src="../../images/star.svg" alt="star">
+                            <div class="goods__card__rating__value">4</div>
+                        </div>
+                        <img class="goods__card__img" src="../../images/filter_goods2.svg" alt="auto image">
+                        <div class="goods__card__title"><span class="goods__card__title__model">honda cr-v</span> |
+                            <span class="goods__card__title__year">2023 г.</span>
+                        </div>
+                        <div class="goods__card__subtitle">honda cr-v</div>
+                        <div class="goods__card__properties">
+                            <div class="goods__card__propertie">2,0 л.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">204 л.с.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Гибрид</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Полный</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">35 000 км</div>
+                        </div>
+                        <div class="goods__card__footer">
+                            <div class="goods__card__price">5 805 000 ₽</div>
+                            <a href="../auto/auto.html"><button class="goods__card__about">Подробнее</button></a>
+                        </div>
+                    </div>
+                    <div class="goods__card">
+                        <div class="goods__card__rating">
+                            <img class="goods__card__rating__img" src="../../images/star.svg" alt="star">
+                            <div class="goods__card__rating__value">4</div>
+                        </div>
+                        <img class="goods__card__img" src="../../images/filter_goods3.svg" alt="auto image">
+                        <div class="goods__card__title"><span class="goods__card__title__model">honda fit</span> |
+                            <span class="goods__card__title__year">2020 г.</span>
+                        </div>
+                        <div class="goods__card__subtitle">honda fit</div>
+                        <div class="goods__card__properties">
+                            <div class="goods__card__propertie">1,3 л.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">98 л.с.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Бензин</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Полный</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">101 000 км</div>
+                        </div>
+                        <div class="goods__card__footer">
+                            <div class="goods__card__price">1 490 000 ₽</div>
+                            <a href="../auto/auto.html"><button class="goods__card__about">Подробнее</button></a>
+                        </div>
+                    </div>
+                    <div class="goods__card">
+                        <div class="goods__card__rating">
+                            <img class="goods__card__rating__img" src="../../images/star.svg" alt="star">
+                            <div class="goods__card__rating__value">4</div>
+                        </div>
+                        <img class="goods__card__img" src="../../images/filter_goods1.svg" alt="auto image">
+                        <div class="goods__card__title"><span class="goods__card__title__model">toyota rav4</span> |
+                            <span class="goods__card__title__year">2021 г.</span>
+                        </div>
+                        <div class="goods__card__subtitle">toyota rav4</div>
+                        <div class="goods__card__properties">
+                            <div class="goods__card__propertie">2,0 л.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">149 л.с.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Бензин</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Полный</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">23 000 км</div>
+                        </div>
+                        <div class="goods__card__footer">
+                            <div class="goods__card__price">3 491 000 ₽</div>
+                            <a href="../auto/auto.html"><button class="goods__card__about">Подробнее</button></a>
+                        </div>
+                    </div>
+                    <div class="goods__card">
+                        <div class="goods__card__rating">
+                            <img class="goods__card__rating__img" src="../../images/star.svg" alt="star">
+                            <div class="goods__card__rating__value">4</div>
+                        </div>
+                        <img class="goods__card__img" src="../../images/filter_goods2.svg" alt="auto image">
+                        <div class="goods__card__title"><span class="goods__card__title__model">honda cr-v</span> |
+                            <span class="goods__card__title__year">2023 г.</span>
+                        </div>
+                        <div class="goods__card__subtitle">honda cr-v</div>
+                        <div class="goods__card__properties">
+                            <div class="goods__card__propertie">2,0 л.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">204 л.с.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Гибрид</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Полный</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">35 000 км</div>
+                        </div>
+                        <div class="goods__card__footer">
+                            <div class="goods__card__price">5 805 000 ₽</div>
+                            <a href="../auto/auto.html"><button class="goods__card__about">Подробнее</button></a>
+                        </div>
+                    </div>
+                    <div class="goods__card">
+                        <div class="goods__card__rating">
+                            <img class="goods__card__rating__img" src="../../images/star.svg" alt="star">
+                            <div class="goods__card__rating__value">4</div>
+                        </div>
+                        <img class="goods__card__img" src="../../images/filter_goods3.svg" alt="auto image">
+                        <div class="goods__card__title"><span class="goods__card__title__model">honda fit</span> |
+                            <span class="goods__card__title__year">2020 г.</span>
+                        </div>
+                        <div class="goods__card__subtitle">honda fit</div>
+                        <div class="goods__card__properties">
+                            <div class="goods__card__propertie">1,3 л.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">98 л.с.</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Бензин</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">Полный</div>
+                            <div class="separator"></div>
+                            <div class="goods__card__propertie">101 000 км</div>
+                        </div>
+                        <div class="goods__card__footer">
+                            <div class="goods__card__price">1 490 000 ₽</div>
+                            <a href="../auto/auto.html"><button class="goods__card__about">Подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <a class="footer__logo__link" href="../../index.html">
+                <img class="footer__logo__img" src="../../images/logo_dark.svg"
+                    alt="Логотип компании Fernando Auto"></img>
+            </a>
+            <ul class="footer-menu">
+                <li class="footer-menu__item"><a class="footer-menu__item__link" href="../../index.html">О нас</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__item__link" href="../calculator/calculator.html">Калькулятор</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__item__link" href="../../index.html">Контакты</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__item__link" href="../reviews/reviews.html">Отзывы</a></li>
+            </ul>
+            <ul class="footer__socials">
+                <li class="footer__socials__item">
+                    <a class="footer__socials__item__link" href="#">
+                        <img class="footer__socials__item__img" src="../../images/telegram_dark.svg"
+                            alt="telegram-icon">
+                    </a>
+                </li>
+                <li class="footer__socials__item">
+                    <a class="footer__socials__item__link" href="#">
+                        <img class="footer__socials__item__img" src="../../images/instagram_dark.svg"
+                            alt="instagram-icon">
+                    </a>
+                </li>
+                <li class="footer__socials__item">
+                    <a class="footer__socials__item__link" href="#">
+                        <img class="footer__socials__item__img" src="../../images/youtube_dark.svg" alt="youtube-icon">
+                    </a>
+                </li>
+            </ul>
+            <div class="footer__license">© Fernando Auto 2024
+                Все права защищены</div>
+            <button type="submit" class="footer__button write">Написать нам</button>
+            <div class="footer__confidentiality"><a class="footer__confidentiality__link" href="#">Политика
+                    конфиденциальности</a></div>
+        </footer>
+    </div>
+
+    <!-- Оставить заявку -->
+    <div class="popup hidden">
+        <div class="popup__container">
+            <button class="popup__close" type="submit">
+                <span class="visually-hidden">Кнопка закрытия окна</span>
+            </button>
+            <form class="popup__content">
+                <label>
+                    <input type="text" name="name" class="popup__content__item name" placeholder="ФИО" />
+                </label>
+                <label>
+                    <input type="text" name="phone" class="popup__content__item phone" placeholder="+7 999 999 99 99" />
+                </label>
+                <label>
+                    <input type="text" name="email" class="popup__content__item email" placeholder="Email" />
+                </label>
+                <label>
+                    <span>Какой автомобиль Вас интересует?</span>
+                    <textarea type="text" name="details" class="popup__content__item details"
+                        placeholder="Марка, модель, год, пробег, комплектация и бюджет"></textarea>
+                </label>
+                <button class="popup__button" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <!-- Задать вопрос -->
+    <div class="popup2 hidden">
+        <div class="popup2__container">
+            <button class="popup2__close" type="submit">
+                <span class="visually-hidden">Кнопка закрытия окна</span>
+            </button>
+            <form class="popup2__content">
+                <label>
+                    <input type="text" name="name" class="popup2__content__item name" placeholder="ФИО" />
+                </label>
+                <label>
+                    <input type="text" name="phone" class="popup2__content__item phone"
+                        placeholder="+7 999 999 99 99" />
+                </label>
+                <label>
+                    <input type="text" name="email" class="popup2__content__item email" placeholder="Email" />
+                </label>
+                <label>
+                    <span>Напишите свой вопрос в поле ниже</span>
+                    <textarea type="text" name="details" class="popup2__content__item details"
+                        placeholder="Комментарий"></textarea>
+                </label>
+                <button class="popup2__button" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <script src="./filter.js"></script>
+</body>
+
+</html>

@@ -63,21 +63,47 @@ const data = {
 };
 
 // Определяем переменные
+
+// Страны
 const chooseCountryButton = document.querySelector(".choose__country");
 const chooseBrandButton = document.querySelector(".brands__content");
 const chooseModelButton = document.querySelector(".models__content");
 const countriesList = document.querySelector(".countries__list");
+const countryArrowDown = document.querySelector(".country__arrow__down");
+const countryArrowUp = document.querySelector(".country__arrow__up");
+
+// Марки
 const brandsContainer = document.querySelector(".brands__container");
 const brandsList = document.querySelector(".brands__list");
 const brandText = document.querySelector(".brand__text");
-const modelsList = document.querySelector(".models__list");
-const modelText = document.querySelector(".model__text");
-const countryArrowDown = document.querySelector(".country__arrow__down");
-const countryArrowUp = document.querySelector(".country__arrow__up");
 const brandArrowDown = document.querySelector(".brand__arrow__down");
 const brandArrowUp = document.querySelector(".brand__arrow__up");
+
+// Модели
+const modelsList = document.querySelector(".models__list");
+const modelText = document.querySelector(".model__text");
 const modelArrowDown = document.querySelector(".model__arrow__down");
 const modelArrowUp = document.querySelector(".model__arrow__up");
+
+// Тип двигателя/топлива
+const fuelTypesToggle = document.querySelector(".fuel-types-toggle");
+const fuelTypesContainer = document.querySelector(".fuel-types__container");
+const fuelTypesList = document.querySelector(".fuel-types__list");
+const fuelTypesArrowDown = document.querySelector(
+  ".fuel-type__arrow__down"
+);
+const fuelTypesArrowUp = document.querySelector(".fuel-type__arrow__up");
+const fuelTypes = Array.from(document.querySelectorAll(".fuel-type"));
+
+// Тип приводы
+const driveTypesToggle = document.querySelector(".drive-types-toggle");
+const driveTypesContainer = document.querySelector(".drive-types__container");
+const driveTypesList = document.querySelector(".drive-types__list");
+const driveTypesArrowDown = document.querySelector(
+  ".drive-type__arrow__down"
+);
+const driveTypesArrowUp = document.querySelector(".drive-type__arrow__up");
+const driveTypes = Array.from(document.querySelectorAll(".drive-type"));
 
 // Генерируем список стран
 data.countries.forEach((country) => {
@@ -185,6 +211,13 @@ countries.forEach((country) => {
   });
 });
 
+// По клику на конкретную страну она отображается в заголовке
+countries.forEach((country) => {
+  country.addEventListener("click", () => {
+    chooseCountryButton.textContent = country.textContent;
+  });
+});
+
 // По клику на конкретную марку она отображается в заголовке
 brands.forEach((item) => {
   item.addEventListener("click", () => {
@@ -219,11 +252,91 @@ models.forEach((item) => {
   });
 });
 
-document.querySelector(".filter__button").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.replace('./pages/filter/filter.html');
+// Событие появления/скрытия списка типов топлива
+fuelTypesToggle.addEventListener("click", () => {
+  fuelTypesContainer.classList.toggle("hidden");
+  fuelTypesArrowDown.classList.toggle("hidden");
+  fuelTypesArrowUp.classList.toggle("hidden");
 });
 
+// По клику на конкретный тип топлива он отображается в списке
+fuelTypes.forEach((fuelType) => {
+  fuelType.addEventListener("click", () => {
+    fuelTypesToggle.textContent = fuelType.textContent;
+  });
+});
+
+// Реализация поиска типов топлива
+const searchFuel = document.querySelector(".fuel-types__search");
+searchFuel.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+searchFuel.addEventListener("input", (ev) => {
+  const value = ev.target.value.trim();
+  const searchItems = Array.from(document.querySelectorAll(".fuel-type"));
+  const searchRegExp = new RegExp(value, "gi");
+
+  if (value === "") {
+    searchItems.forEach((el) => {
+      el.classList.remove("hidden");
+    });
+    return;
+  }
+
+  searchItems.forEach((el) => {
+    const elementText = el.textContent;
+    const isContainsSearchRequest = searchRegExp.test(elementText);
+    if (!isContainsSearchRequest) {
+      el.classList.add("hidden");
+    } else {
+      el.classList.remove("hidden");
+    }
+  });
+});
+
+// Событие появления/скрытия списка типов привода
+driveTypesToggle.addEventListener("click", () => {
+  driveTypesContainer.classList.toggle("hidden");
+  driveTypesArrowDown.classList.toggle("hidden");
+  driveTypesArrowUp.classList.toggle("hidden");
+});
+
+// По клику на конкретный тип топлива он отображается в списке
+driveTypes.forEach((driveType) => {
+  driveType.addEventListener("click", () => {
+    driveTypesToggle.textContent = driveType.textContent;
+  });
+});
+
+// Реализация поиска типов топлива
+const searchDrive = document.querySelector(".drive-types__search");
+searchDrive.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+searchDrive.addEventListener("input", (ev) => {
+  const value = ev.target.value.trim();
+  const searchItems = Array.from(document.querySelectorAll(".drive-type"));
+  const searchRegExp = new RegExp(value, "gi");
+
+  if (value === "") {
+    searchItems.forEach((el) => {
+      el.classList.remove("hidden");
+    });
+    return;
+  }
+
+  searchItems.forEach((el) => {
+    const elementText = el.textContent;
+    const isContainsSearchRequest = searchRegExp.test(elementText);
+    if (!isContainsSearchRequest) {
+      el.classList.add("hidden");
+    } else {
+      el.classList.remove("hidden");
+    }
+  });
+});
 
 // Событие открытия окна "Оставить заявку"
 const popup = document.querySelector(".popup");

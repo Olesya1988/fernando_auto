@@ -15,11 +15,11 @@ const fuelTypesList = document.querySelector(".fuel-types__list");
 
 
 const fuelTypesArrowDown = document.querySelector(
-    ".fuel-type__arrow__down"
-  );
-  const fuelTypesArrowUp = document.querySelector(".fuel-type__arrow__up");
+  ".fuel-type__arrow__down"
+);
+const fuelTypesArrowUp = document.querySelector(".fuel-type__arrow__up");
 
-  const fuelTypes = Array.from(document.querySelectorAll(".fuel-type"));
+const fuelTypes = Array.from(document.querySelectorAll(".fuel-type"));
 
 
 // Событие появления/скрытия списка типов лиц
@@ -38,19 +38,19 @@ clientTypes.forEach((clientType) => {
 
 // Событие появления/скрытия списка типов топлива
 fuelTypesToggle.addEventListener("click", () => {
-    fuelTypesContainer.classList.toggle("hidden");
-    fuelTypesArrowDown.classList.toggle("hidden");
-    fuelTypesArrowUp.classList.toggle("hidden");
-  });
-  
-  // По клику на конкретный тип топлива он отображается в списке
-  fuelTypes.forEach((fuelType) => {
-    fuelType.addEventListener("click", () => {
-        fuelTypesToggle.textContent = fuelType.textContent;
-    });
-  });
+  fuelTypesContainer.classList.toggle("hidden");
+  fuelTypesArrowDown.classList.toggle("hidden");
+  fuelTypesArrowUp.classList.toggle("hidden");
+});
 
-  // Реализация поиска типов топлива
+// По клику на конкретный тип топлива он отображается в списке
+fuelTypes.forEach((fuelType) => {
+  fuelType.addEventListener("click", () => {
+    fuelTypesToggle.textContent = fuelType.textContent;
+  });
+});
+
+// Реализация поиска типов топлива
 const search = document.querySelector(".fuel-types__search");
 search.addEventListener("click", (e) => {
   e.stopPropagation();
@@ -77,4 +77,36 @@ search.addEventListener("input", (ev) => {
       el.classList.remove("hidden");
     }
   });
+});
+
+// Событие открытия окна "Оставить заявку"
+const popup = document.querySelector(".popup");
+const buttons = Array.from(document.querySelectorAll(".order"));
+const close = document.querySelector(".popup__close");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    popup.classList.remove("hidden");
+  });
+});
+
+// Событие закрытия окна "Оставить заявку"
+close.addEventListener("click", () => {
+  popup.classList.add("hidden");
+});
+
+// Событие открытия окна "Задать вопрос"
+const popup2 = document.querySelector(".popup2");
+const buttons2 = Array.from(document.querySelectorAll(".write"));
+const close2 = document.querySelector(".popup2__close");
+
+buttons2.forEach((button) => {
+  button.addEventListener("click", () => {
+    popup2.classList.remove("hidden");
+  });
+});
+
+// Событие закрытия окна "Задать вопрос"
+close2.addEventListener("click", () => {
+  popup2.classList.add("hidden");
 });
