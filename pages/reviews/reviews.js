@@ -60,3 +60,12 @@ reviewsCardButton.forEach(el => {
     })
 })
 
+// Событие разворачивания меню-гамбургера
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const hamburgerMenuList = document.querySelector('.hamburger-menu__list');
+hamburgerMenu.addEventListener('click', () => {
+    console.log(1);
+    hamburgerMenuList.classList.toggle('hidden');
+})
+

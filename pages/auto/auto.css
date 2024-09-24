@@ -86,6 +86,28 @@ header {
   text-align: left;
 }
 
+.hamburger-menu {
+  width: 24px;
+  display: none;
+  cursor: pointer;
+
+  z-index: 100;
+}
+
+.hamburger-menu__list {
+  position: absolute;
+  top: 52px;
+  left: 16px;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.hamburger-menu__item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
 .top-menu {
   grid-row: 1;
   grid-column: 2;
@@ -221,9 +243,14 @@ header {
   justify-content: space-between;
 }
 
-.auto__card__title {
+.auto__card__title,
+.auto__card__title_mobile {
   font-size: 24px;
   font-weight: 600;
+}
+
+.auto__card__title_mobile {
+  display: none;
 }
 
 .auto__card__specification {
@@ -414,6 +441,10 @@ header {
   border: 1px solid var(--bg-color);
 }
 
+.auto__similar__arrows {
+  display: none;
+}
+
 /* Footer */
 
 footer {
@@ -579,7 +610,7 @@ footer {
 
   background-color: rgba(0, 0, 0, 0.6);
 
-  z-index: 10;
+  z-index: 1000;
 }
 
 .popup__container,
@@ -705,4 +736,383 @@ label span {
 
 .selected {
   color: #4e23f0;
+}
+
+.active {
+  z-index: 100;
+}
+
+@media (max-width: 360px) {
+  /* Header */
+
+  header {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1 0fr;
+
+    padding: 16px 16px 0;
+    top: 0;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .location {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .top-menu {
+    display: none;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .logo__link {
+    height: 36px;
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .logo__img {
+    width: 56px;
+    height: 36px;
+    align-self: center;
+  }
+
+  .feedback {
+    width: 76px;
+    height: 15px;
+
+    grid-row: 1;
+    grid-column: 3;
+
+    padding: 4px;
+
+    font-size: 6px;
+  }
+
+  /* Конкретное авто */
+
+  .auto {
+    padding: 0 16px;
+  }
+
+  .auto__card {
+    flex-wrap: wrap;
+  }
+
+  .auto__card__img {
+    width: 100%;
+  }
+
+  .auto__card__img__main {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .auto__card__img__extra__item {
+    width: 49%;
+  }
+
+  .auto__card__img__extra__item:last-child {
+    display: none;
+  }
+
+  .auto__card__description {
+    width: 100%;
+    padding-top: 16px;
+  }
+
+  .auto__card__title {
+    display: none;
+  }
+
+  .auto__card__title_mobile {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .auto__card__specification {
+    font-size: 12px;
+
+    margin-bottom: 8px;
+  }
+
+  .auto__card__specification__name {
+    width: 49%;
+  }
+
+  .auto__card__specification__value {
+    width: 49%;
+    text-align: right;
+  }
+
+  .auto__card__price {
+    font-size: 12px;
+  }
+
+  .auto__card__button {
+    width: 106px;
+    height: 32px;
+    padding: 5px 8px;
+
+    font-size: 10px;
+    margin-top: 16px;
+  }
+
+  .auto__similar {
+    padding: 24px 0 0;
+  }
+
+  .auto__similar__title {
+    font-size: 16px;
+
+    padding-bottom: 0;
+  }
+
+  .auto__similar__contaiter {
+    position: relative;
+    min-height: 350px;
+  }
+
+  .auto__similar__card {
+    width: 244px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    background-color: var(--text-color);
+  }
+
+  .auto__similar__card__rating {
+    top: 120px;
+    left: 13px;
+  }
+
+  .auto__similar__card__rating__img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .auto__similar__card__rating__value {
+    font-size: 12px;
+  }
+
+  .auto__similar__card__img {
+    height: 159px;
+  }
+
+  .auto__similar__card__title {
+    padding: 8px 0;
+
+    font-size: 12px;
+  }
+
+  .auto__similar__card__subtitle {
+    font-size: 12px;
+  }
+
+  .auto__similar__card__properties {
+    flex-wrap: wrap;
+
+    padding: 16px 0 0;
+  }
+
+  .auto__similar__card__propertie {
+    font-size: 10px;
+  }
+
+  .auto__similar__card__footer {
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  .auto__similar__card__price {
+    font-size: 12px;
+  }
+
+  .auto__similar__card__about {
+    padding: 5px 8px;
+
+    font-size: 12px;
+  }
+
+  .auto__similar__arrows {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 8px;
+  }
+
+  .auto__similar__arrow__back,
+  .auto__similar__arrow__next {
+    width: 34px;
+    cursor: pointer;
+  }
+
+  /* Footer */
+
+  footer {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+
+    padding: 16px;
+
+    width: 100%;
+
+    color: var(--bg-color);
+  }
+
+  .footer__logo__link {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: center;
+
+    display: flex;
+    align-items: flex-end;
+
+    height: 36px;
+    padding: 16px 0;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .footer__logo__img {
+    width: 56px;
+    height: 36px;
+
+    align-self: center;
+  }
+
+  .footer-menu {
+    grid-row: 1;
+    grid-column: 2 / span 2;
+    align-self: center;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    height: 36px;
+    padding: 16px 0;
+
+    margin-bottom: 16px;
+  }
+
+  .footer-menu__item {
+    padding-top: 22px;
+  }
+
+  .footer-menu__item__link {
+    font-size: 10px;
+
+    display: inline-block;
+    height: 100%;
+  }
+
+  .footer__socials {
+    grid-row: 2;
+    grid-column: 1;
+    align-self: center;
+
+    gap: 8px;
+
+    width: 100%;
+    height: 20px;
+
+    border-top: 0;
+  }
+
+  .footer__socials__item__img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer__license {
+    grid-row: 3;
+    grid-column: 3;
+
+    align-self: end;
+    justify-self: end;
+
+    font-size: 8px;
+
+    max-width: 120px;
+    text-align: right;
+  }
+
+  .footer__button {
+    grid-row: 2;
+    grid-column: 3;
+
+    align-self: center;
+    justify-self: end;
+
+    font-size: 10px;
+
+    width: 105px;
+    height: 20px;
+
+    padding: 4px;
+  }
+
+  .footer__confidentiality {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+
+    justify-items: end;
+
+    align-self: end;
+    justify-self: center;
+
+    font-size: 8px;
+  }
+
+  .footer__confidentiality__link {
+    font-size: 8px;
+  }
+
+  /* Форма обратной связи */
+
+  .popup__container,
+  .popup2__container {
+    width: 290px;
+    height: 544px;
+
+    font-size: 10px;
+  }
+
+  .popup__content__item,
+  .popup2__content__item {
+    height: 44px;
+
+    font-size: 10px;
+  }
+
+  label span {
+    font-size: 10px;
+
+    margin-bottom: 16px;
+
+    padding-left: 8px;
+  }
+
+  .popup__button,
+  .popup2__button {
+    font-size: 10px;
+
+    padding: 16px 10px;
+  }
 }

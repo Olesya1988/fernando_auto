@@ -110,3 +110,12 @@ buttons2.forEach((button) => {
 close2.addEventListener("click", () => {
   popup2.classList.add("hidden");
 });
+
+// Событие разворачивания меню-гамбургера
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const hamburgerMenuList = document.querySelector('.hamburger-menu__list');
+hamburgerMenu.addEventListener('click', () => {
+  console.log(1);
+  hamburgerMenuList.classList.toggle('hidden');
+})

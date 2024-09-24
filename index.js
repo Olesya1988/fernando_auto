@@ -256,3 +256,117 @@ buttons2.forEach((button) => {
 close2.addEventListener("click", () => {
   popup2.classList.add("hidden");
 });
+
+// Событие разворачивания меню-гамбургера
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const hamburgerMenuList = document.querySelector('.hamburger-menu__list');
+hamburgerMenu.addEventListener('click', () => {
+  console.log(1);
+  hamburgerMenuList.classList.toggle('hidden');
+})
+
+// Слайдер раздела О нас
+
+const companyImagesArrowBack = document.querySelector('.company__images__arrow__back');
+const companyImagesArrowNext = document.querySelector('.company__images__arrow__next');
+
+
+const companyImageArray = document.querySelectorAll('.company__image');
+let counter = 1;
+companyImageArray[counter].classList.add('active');
+companyImagesArrowBack.addEventListener('click', () => {
+  companyImageArray.forEach(el => el.classList.remove('active'));
+  counter = counter - 1;
+  if (counter === -1) {
+    counter = companyImageArray.length - 1;
+  }
+  companyImageArray[counter].classList.add('active');
+})
+
+companyImagesArrowNext.addEventListener('click', () => {
+  companyImageArray.forEach(el => el.classList.remove('active'));
+  counter = counter + 1;
+  if (counter === 3) {
+    counter = 0;
+  }
+  companyImageArray[counter].classList.add('active');
+})
+
+// Слайдер раздела Популярные авто
+const goodsArrowBack = document.querySelector('.goods__arrow__back');
+const goodsArrowNext = document.querySelector('.goods__arrow__next');
+
+
+const goodsCardsArray = document.querySelectorAll('.goods__card');
+let counterGood = 0;
+goodsCardsArray[counterGood].classList.add('active');
+goodsArrowBack.addEventListener('click', () => {
+  goodsCardsArray.forEach(el => el.classList.remove('active'));
+  counterGood = counterGood - 1;
+  if (counterGood === -1) {
+    counterGood = goodsCardsArray.length - 1;
+  }
+  goodsCardsArray[counterGood].classList.add('active');
+})
+
+goodsArrowNext.addEventListener('click', () => {
+  goodsCardsArray.forEach(el => el.classList.remove('active'));
+  counterGood = counterGood + 1;
+  if (counterGood === 3) {
+    counterGood = 0;
+  }
+  goodsCardsArray[counterGood].classList.add('active');
+})
+
+// Слайдер раздела с фильтром
+const fiterGoodsArrowBack = document.querySelector('.fiter__goods__arrow__back');
+const fiterGoodsArrowNext = document.querySelector('.fiter__goods__arrow__next');
+
+
+const fiterGoodsCardsArray = document.querySelectorAll('.fiter__goods__item');
+let counterGoodFiter = 0;
+fiterGoodsCardsArray[counterGoodFiter].classList.add('active');
+fiterGoodsArrowBack.addEventListener('click', () => {
+  fiterGoodsCardsArray.forEach(el => el.classList.remove('active'));
+  counterGoodFiter = counterGoodFiter - 1;
+  if (counterGoodFiter === -1) {
+    counterGoodFiter = fiterGoodsCardsArray.length - 1;
+  }
+  fiterGoodsCardsArray[counterGoodFiter].classList.add('active');
+})
+
+fiterGoodsArrowNext.addEventListener('click', () => {
+  fiterGoodsCardsArray.forEach(el => el.classList.remove('active'));
+  counterGoodFiter = counterGoodFiter + 1;
+  if (counterGoodFiter === 3) {
+    counterGoodFiter = 0;
+  }
+  fiterGoodsCardsArray[counterGoodFiter].classList.add('active');
+})
+
+// Слайдер раздела с отзывами
+const reviewsArrowBack = document.querySelector('.reviews__title__arrow__back');
+const reviewsArrowNext = document.querySelector('.reviews__title__arrow__next');
+
+
+const reviewsCardsArray = document.querySelectorAll('.reviews__card');
+let counterReviews = 0;
+reviewsCardsArray[counterReviews].classList.add('active');
+reviewsArrowBack.addEventListener('click', () => {
+  reviewsCardsArray.forEach(el => el.classList.remove('active'));
+  counterReviews = counterReviews - 1;
+  if (counterReviews === -1) {
+    counterReviews = reviewsCardsArray.length - 1;
+  }
+  reviewsCardsArray[counterReviews].classList.add('active');
+})
+
+reviewsArrowNext.addEventListener('click', () => {
+  reviewsCardsArray.forEach(el => el.classList.remove('active'));
+  counterReviews = counterReviews + 1;
+  if (counterReviews === 3) {
+    counterReviews = 0;
+  }
+  reviewsCardsArray[counterReviews].classList.add('active');
+})
