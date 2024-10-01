@@ -100,6 +100,8 @@ header {
   left: 16px;
   background-color: var(--text-color);
   color: var(--bg-color);
+
+  z-index: 101;
 }
 
 .hamburger-menu__item {
@@ -217,6 +219,29 @@ header {
 .auto__card__img {
   width: 49%;
   border-radius: 10px;
+  position: relative;
+}
+
+.auto__card__img__arrow__back,
+.auto__card__img__arrow__next {
+  width: 30px;
+
+  position: absolute;
+  top: 40%;
+
+  cursor: pointer;
+
+  background-color: var(--text-color);
+  padding: 10px 7px;
+  border-radius: 50%;
+}
+
+.auto__card__img__arrow__back {
+  left: 10px;
+}
+
+.auto__card__img__arrow__next {
+  right: 10px;
 }
 
 .auto__card__img__main {
@@ -230,9 +255,15 @@ header {
   justify-content: space-between;
 }
 
+.active-img {
+  outline: 6px double var(--bg-color);
+}
+
 .auto__card__img__extra__item {
   width: 31%;
   border-radius: 10px;
+
+  cursor: pointer;
 }
 
 .auto__card__description {
@@ -280,6 +311,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  gap: 10px;
 }
 
 .auto__card__price {
@@ -308,8 +341,27 @@ header {
   color: var(--bg-color);
 }
 
+.profit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 40px;
+
+  padding: 90px 0 0;
+}
+
+.profit__text {
+  font-weight: 400;
+}
+
+.profit__value {
+  font-weight: 900;
+}
+
 .auto__similar {
-  padding: 120px 0 0;
+  padding: 90px 0 0;
 }
 
 .auto__similar__title {
@@ -386,9 +438,10 @@ header {
 
 .auto__similar__card__properties {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
+  gap: 5px;
 
   padding: 24px 0;
 }
@@ -742,7 +795,382 @@ label span {
   z-index: 100;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 1200px) {
+  .auto__card__specification {
+    font-size: 16px;
+  }
+
+  .auto__card__price {
+    font-size: 16px;
+  }
+
+  .auto__card__button {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .profit {
+    font-size: 25px;
+  }
+
+  .auto__similar__card__footer {
+    flex-wrap: wrap;
+  }
+
+  .auto__similar__card__price {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1010px) {
+}
+
+@media (max-width: 1010px) {
+  .top-menu {
+    gap: 15px;
+  }
+
+  .top-menu__item__link {
+    font-size: 14px;
+  }
+
+  /* Footer */
+
+  footer {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: 2.5fr 1fr 1fr;
+
+    padding: 16px;
+
+    width: 100%;
+
+    color: var(--bg-color);
+  }
+
+  .footer__logo__link {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: center;
+
+    display: flex;
+    align-items: flex-end;
+
+    height: 104px;
+    padding: 16px 0;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .footer__logo__img {
+    width: 162px;
+    height: 104px;
+
+    align-self: center;
+  }
+
+  .footer-menu {
+    grid-row: 1;
+    grid-column: 2 / span 2;
+    align-self: center;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+
+    height: 104px;
+    padding: 16px 0;
+
+    margin-bottom: 16px;
+  }
+
+  .footer-menu__item {
+    padding-top: 22px;
+  }
+
+  .footer-menu__item__link {
+    font-size: 16px;
+
+    display: inline-block;
+    height: 100%;
+  }
+
+  .footer__socials {
+    grid-row: 2;
+    grid-column: 1;
+    align-self: center;
+
+    gap: 33px;
+
+    width: 100%;
+    height: 32px;
+
+    border-top: 0;
+    margin-top: 20px;
+  }
+
+  .footer__socials__item__img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer__license {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+
+    align-self: end;
+    justify-self: start;
+
+    font-size: 14px;
+
+    max-width: 200px;
+    text-align: left;
+  }
+
+  .footer__button {
+    grid-row: 2;
+    grid-column: 3;
+
+    align-self: center;
+    justify-self: end;
+
+    font-size: 16px;
+
+    width: 160px;
+    height: 40px;
+
+    padding: 4px;
+  }
+
+  .footer__confidentiality {
+    grid-row: 3;
+    grid-column: 3;
+
+    justify-items: end;
+
+    align-self: end;
+    justify-self: end;
+
+    font-size: 14px;
+  }
+
+  .footer__confidentiality__link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    padding: 24px 40px;
+    top: 24px;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .location {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    width: 53px;
+
+    object-fit: cover;
+  }
+
+  .hamburger-menu__list {
+    top: 100px;
+    left: 30px;
+  }
+
+  .hamburger-menu__item {
+    font-size: 15px;
+  }
+
+  .top-menu {
+    display: none;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .logo__link {
+    height: 80px;
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .logo__img {
+    width: 124px;
+    height: 80px;
+    align-self: center;
+  }
+
+  .feedback {
+    grid-row: 1;
+    grid-column: 3;
+
+    padding: 8px;
+
+    font-size: 14px;
+  }
+
+  /* Конкретное авто */
+
+  .auto {
+    padding: 32px 30px 0;
+  }
+  .auto__card__img__arrow__back,
+  .auto__card__img__arrow__next {
+    top: 35%;
+  }
+
+  .auto__card__img__main {
+    margin-bottom: 16px;
+  }
+
+  .auto__card__title,
+  .auto__card__title_mobile {
+    font-size: 16px;
+  }
+
+  .auto__card__specification {
+    font-size: 14px;
+
+    margin-bottom: 16px;
+  }
+
+  .auto__card__footer {
+    gap: 5px;
+  }
+
+  .auto__card__price {
+    font-size: 16px;
+  }
+
+  .auto__card__button {
+    width: 95%;
+
+    font-size: 15px;
+  }
+
+  .profit {
+    font-size: 20px;
+
+    padding: 40px 0 0;
+  }
+
+  .auto__similar {
+    padding: 32px 0 0;
+  }
+
+  .auto__similar__title {
+    font-size: 16px;
+
+    padding-bottom: 16px;
+  }
+
+  .auto__similar__card__rating {
+    top: 100px;
+    left: 16px;
+  }
+
+  .auto__similar__card__rating__img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .auto__similar__card__rating__value {
+    font-size: 14px;
+  }
+
+  .auto__similar__card__img {
+    height: 131px;
+  }
+
+  .auto__similar__card__title {
+    padding: 16px 0 16px;
+
+    font-size: 16px;
+    min-height: 70px;
+  }
+
+  .auto__similar__card__subtitle {
+    font-size: 16px;
+    min-height: 38px;
+  }
+
+  .auto__similar__card__properties {
+    flex-wrap: wrap;
+
+    padding: 36px 0;
+  }
+
+  .auto__similar__card__propertie {
+    font-size: 10px;
+  }
+
+  .separator {
+    width: 6px;
+    height: 6px;
+  }
+
+  .auto__similar__card__footer {
+    flex-wrap: wrap;
+  }
+
+  .auto__similar__card__price {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .auto__similar__card__about {
+    font-size: 16px;
+  }
+
+  /* Форма обратной связи */
+
+  .popup__container,
+  .popup2__container {
+    width: 290px;
+    height: 544px;
+
+    font-size: 10px;
+  }
+
+  .popup__content__item,
+  .popup2__content__item {
+    height: 44px;
+
+    font-size: 10px;
+  }
+
+  label span {
+    font-size: 10px;
+
+    margin-bottom: 16px;
+
+    padding-left: 8px;
+  }
+
+  .popup__button,
+  .popup2__button {
+    font-size: 10px;
+
+    padding: 16px 10px;
+  }
+}
+
+@media (max-width: 543px) {
   /* Header */
 
   header {
@@ -764,6 +1192,13 @@ label span {
 
   .hamburger-menu {
     display: block;
+    width: 24px;
+    height: 20px;
+  }
+
+  .hamburger-menu__list {
+    top: 50px;
+    left: 16px;
   }
 
   .top-menu {
@@ -868,6 +1303,12 @@ label span {
     margin-top: 16px;
   }
 
+  .profit {
+    font-size: 16px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
   .auto__similar {
     padding: 24px 0 0;
   }
@@ -950,6 +1391,8 @@ label span {
     right: 0;
     display: flex;
     gap: 8px;
+
+    z-index: 101;
   }
 
   .auto__similar__arrow__back,
@@ -971,6 +1414,7 @@ label span {
     width: 100%;
 
     color: var(--bg-color);
+    margin-top: 80px;
   }
 
   .footer__logo__link {

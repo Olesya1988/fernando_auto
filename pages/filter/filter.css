@@ -216,8 +216,6 @@ header {
   align-items: center;
 
   position: relative;
-
-  width: 600px;
 }
 
 .filter__title__item {
@@ -647,9 +645,10 @@ header {
 
 .goods__card__properties {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
+  gap: 5px;
 
   padding: 24px 0;
 }
@@ -1003,7 +1002,437 @@ label span {
   z-index: 100;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
+  .goods__card__footer {
+    flex-wrap: wrap;
+  }
+  .goods__card__price {
+    font-size: 16px;
+  }
+
+  .goods__card__about {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1010px) {
+  .top-menu {
+    gap: 15px;
+  }
+
+  .top-menu__item__link {
+    font-size: 14px;
+  }
+
+  .goods__card__title {
+    font-size: 16px;
+  }
+
+  .goods__card__subtitle {
+    font-size: 16px;
+  }
+
+  .goods__card__price {
+    width: 100%;
+  }
+
+  /* Footer */
+
+  footer {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: 2.5fr 1fr 1fr;
+
+    padding: 16px;
+
+    width: 100%;
+
+    color: var(--bg-color);
+  }
+
+  .footer__logo__link {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: center;
+
+    display: flex;
+    align-items: flex-end;
+
+    height: 104px;
+    padding: 16px 0;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .footer__logo__img {
+    width: 162px;
+    height: 104px;
+
+    align-self: center;
+  }
+
+  .footer-menu {
+    grid-row: 1;
+    grid-column: 2 / span 2;
+    align-self: center;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+
+    height: 104px;
+    padding: 16px 0;
+
+    margin-bottom: 16px;
+  }
+
+  .footer-menu__item {
+    padding-top: 22px;
+  }
+
+  .footer-menu__item__link {
+    font-size: 16px;
+
+    display: inline-block;
+    height: 100%;
+  }
+
+  .footer__socials {
+    grid-row: 2;
+    grid-column: 1;
+    align-self: center;
+
+    gap: 33px;
+
+    width: 100%;
+    height: 32px;
+
+    border-top: 0;
+    margin-top: 20px;
+  }
+
+  .footer__socials__item__img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer__license {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+
+    align-self: end;
+    justify-self: start;
+
+    font-size: 14px;
+
+    max-width: 200px;
+    text-align: left;
+  }
+
+  .footer__button {
+    grid-row: 2;
+    grid-column: 3;
+
+    align-self: center;
+    justify-self: end;
+
+    font-size: 16px;
+
+    width: 160px;
+    height: 40px;
+
+    padding: 4px;
+  }
+
+  .footer__confidentiality {
+    grid-row: 3;
+    grid-column: 3;
+
+    justify-items: end;
+
+    align-self: end;
+    justify-self: end;
+
+    font-size: 14px;
+  }
+
+  .footer__confidentiality__link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    padding: 24px 40px;
+    top: 24px;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .location {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    width: 53px;
+
+    object-fit: cover;
+  }
+
+  .hamburger-menu__list {
+    top: 100px;
+    left: 30px;
+  }
+
+  .hamburger-menu__item {
+    font-size: 15px;
+  }
+
+  .top-menu {
+    display: none;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .logo__link {
+    height: 80px;
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .logo__img {
+    width: 124px;
+    height: 80px;
+    align-self: center;
+  }
+
+  .feedback {
+    grid-row: 1;
+    grid-column: 3;
+
+    padding: 8px;
+
+    font-size: 14px;
+  }
+
+  /* Раздел с фильтром */
+
+  .filter {
+    padding: 32px 30px 0;
+  }
+
+  .filter__title__item {
+    font-size: 16px;
+  }
+
+  .countries__list {
+    top: 40px;
+    left: 80px;
+
+    width: 150px;
+    height: 70px;
+  }
+
+  .country,
+  .brand,
+  .model {
+    font-size: 12px;
+  }
+
+  .filter__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 32px 0;
+  }
+
+  .filter__item {
+    width: 32%;
+
+    margin-bottom: 20px;
+  }
+
+  .filter__item__title {
+    font-size: 16px;
+  }
+
+  .filter__item__content {
+    font-size: 16px;
+
+    height: 50px;
+  }
+
+  .brands__container {
+    top: 60px;
+    right: 0;
+
+    z-index: 101;
+
+    width: 100%;
+    height: 165px;
+  }
+
+  .models__list {
+    top: 60px;
+    right: 0;
+
+    z-index: 101;
+
+    width: 100%;
+    height: 165px;
+  }
+
+  .filter__item__input {
+    font-size: 16px;
+
+    height: 50px;
+  }
+
+  .filter__item__input__value {
+    font-size: 16px;
+  }
+
+  .fuel-types__container {
+    width: 100%;
+    height: 170px;
+
+    font-size: 12px;
+  }
+
+  .search__img {
+    top: 15px;
+  }
+
+  .fuel-type {
+    padding: 4px 0;
+
+    cursor: pointer;
+  }
+
+  .drive {
+    position: relative;
+  }
+
+  .drive-types__container {
+    height: 150px;
+
+    font-size: 12px;
+  }
+
+  .filter__button {
+    width: 32%;
+
+    font-size: 16px;
+  }
+
+  .goods__card {
+    padding-bottom: 20px;
+  }
+
+  .goods__card__rating {
+    top: 90px;
+    left: 16px;
+  }
+
+  .goods__card__rating__img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .goods__card__rating__value {
+    font-size: 14px;
+  }
+
+  .goods__card__img {
+    height: 131px;
+  }
+
+  .goods__card__title {
+    padding: 16px 0 8px;
+
+    font-size: 16px;
+  }
+
+  .goods__card__subtitle {
+    font-size: 16px;
+  }
+
+  .goods__card__properties {
+    flex-wrap: wrap;
+    gap: 5px;
+
+    padding: 16px 0;
+  }
+
+  .goods__card__propertie {
+    font-size: 10px;
+  }
+
+  .separator {
+    width: 6px;
+    height: 6px;
+  }
+
+  .goods__card__footer {
+    flex-wrap: wrap;
+  }
+
+  .goods__card__price {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 21px;
+  }
+
+  .goods__card__about {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Форма обратной связи */
+
+  .popup__container,
+  .popup2__container {
+    width: 290px;
+    height: 544px;
+
+    font-size: 10px;
+  }
+
+  .popup__content__item,
+  .popup2__content__item {
+    height: 44px;
+
+    font-size: 10px;
+  }
+
+  label span {
+    font-size: 10px;
+
+    margin-bottom: 16px;
+
+    padding-left: 8px;
+  }
+
+  .popup__button,
+  .popup2__button {
+    font-size: 10px;
+
+    padding: 16px 10px;
+  }
+}
+
+@media (max-width: 543px) {
   /* Header */
 
   header {
@@ -1025,6 +1454,13 @@ label span {
 
   .hamburger-menu {
     display: block;
+    width: 24px;
+    height: 20px;
+  }
+
+  .hamburger-menu__list {
+    top: 50px;
+    left: 16px;
   }
 
   .top-menu {
@@ -1062,7 +1498,7 @@ label span {
   /* Раздел с фильтром */
 
   .filter {
-    padding: 0 16px 16px;
+    padding: 16px;
   }
 
   .filter__title {
@@ -1085,8 +1521,6 @@ label span {
   .countries__list {
     top: 35px;
     right: 0;
-
-    width: 100%;
   }
 
   .country,
@@ -1300,6 +1734,7 @@ label span {
     display: flex;
     gap: 8px;
     align-items: center;
+    z-index: 101;
   }
 
   .goods__card__arrow__back,
@@ -1321,6 +1756,7 @@ label span {
     width: 100%;
 
     color: var(--bg-color);
+    margin-top: 20px;
   }
 
   .footer__logo__link {

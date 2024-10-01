@@ -64,3 +64,42 @@ hamburgerMenu.addEventListener('click', () => {
   console.log(1);
   hamburgerMenuList.classList.toggle('hidden');
 })
+
+// Слайдер изображений
+const imgArrowBack = document.querySelector('.auto__card__img__arrow__back');
+const imgArrowNext = document.querySelector('.auto__card__img__arrow__next');
+
+const imgArr = Array.from(document.querySelectorAll('.auto__card__img__extra__item'));
+let counterImg = 0;
+let mainImg = document.querySelector('.auto__card__img__main');
+
+imgArr[counterImg].classList.add('active-img');
+
+imgArrowNext.addEventListener('click', () => {
+  imgArr.forEach(el => el.classList.remove('active-img'));
+  counterImg = counterImg + 1;
+  if (counterImg === imgArr.length) {
+    counterImg = 0;
+  }
+  imgArr[counterImg].classList.add('active-img');
+  mainImg.src = imgArr[counterImg].src;
+})
+
+imgArrowBack.addEventListener('click', () => {
+  imgArr.forEach(el => el.classList.remove('active-img'));
+  counterImg = counterImg - 1;
+  if (counterImg === -1) {
+    counterImg = imgArr.length - 1;
+  }
+  imgArr[counterImg].classList.add('active-img');
+  mainImg.src = imgArr[counterImg].src;
+})
+
+imgArr.forEach(el => {
+  el.addEventListener('click', () => {
+    imgArr.forEach(el => el.classList.remove('active-img'));
+    counterImg = imgArr.indexOf(el);
+    imgArr[counterImg].classList.add('active-img');
+    mainImg.src = imgArr[counterImg].src;
+  })
+});

@@ -27,8 +27,8 @@ body,
   width: 100%;
 
   position: relative;
-
-  background-color: var(--bg-color);
+  color: var(--bg-color);
+  background-color: var(--text-color);
 }
 
 /* Header */
@@ -44,9 +44,6 @@ header {
   position: relative;
 
   width: 100%;
-
-  color: var(--text-color);
-  background-color: var(--bg-color);
 }
 
 .location {
@@ -61,7 +58,7 @@ header {
 
   height: 49px;
 
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--bg-color);
   padding-bottom: 10px;
 }
 
@@ -92,6 +89,7 @@ header {
   left: 16px;
   background-color: var(--text-color);
   color: var(--bg-color);
+  z-index: 101;
 }
 
 .hamburger-menu__item {
@@ -113,7 +111,7 @@ header {
 
   height: 49px;
 
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--bg-color);
   padding-bottom: 10px;
 }
 
@@ -121,7 +119,7 @@ header {
   font-size: 20px;
   font-weight: 400;
 
-  color: var(--text-color);
+  color: var(--bg-color);
 }
 
 .socials {
@@ -138,7 +136,7 @@ header {
   width: 100%;
   height: 49px;
 
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--bg-color);
   padding-bottom: 10px;
 }
 
@@ -168,17 +166,17 @@ header {
   align-self: center;
   justify-self: end;
 
-  width: 207px;
-  height: 45px;
+  /* width: 207px;
+  height: 45px; */
 
   padding: 10px 15px;
 
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--bg-color);
   border-radius: 50px;
 
-  background-color: var(--text-color);
+  background-color: var(--bg-color);
 
-  color: var(--bg-color);
+  color: var(--text-color);
   font-size: 20px;
   font-weight: 400;
 
@@ -190,15 +188,13 @@ header {
 }
 
 .feedback:hover {
-  color: var(--text-color);
+  color: var(--bg-color);
   background-color: transparent;
 }
 
 /* Раздел "Популярные авто" */
 
 .goods {
-  background-color: var(--bg-color);
-  color: var(--text-color);
   padding: 112px 80px 0;
 }
 
@@ -311,21 +307,20 @@ header {
   padding: 10px 16px;
 
   border-radius: 50px;
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--bg-color);
 
   font-size: 20px;
   font-weight: 400;
 
-  background-color: transparent;
-  color: var(--text-color);
+  background-color: var(--text-color);
+  color: var(--bg-color);
 
   cursor: pointer;
 }
 
 .goods__card__about:hover {
-  background-color: var(--text-color);
-  color: var(--bg-color);
-  border: 1px solid var(--text-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .goods__search {
@@ -362,7 +357,7 @@ header {
 }
 
 .active-page {
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--bg-color);
   border-radius: 50%;
 }
 
@@ -387,8 +382,6 @@ footer {
   padding: 112px 80px 32px;
 
   width: 100%;
-
-  color: var(--text-color);
 }
 
 .footer__logo__link {
@@ -400,7 +393,7 @@ footer {
 
   height: 113px;
 
-  border-top: 1px solid var(--text-color);
+  border-top: 1px solid var(--bg-color);
 }
 
 .footer__logo__img {
@@ -423,14 +416,12 @@ footer {
 
   height: 113px;
 
-  border-top: 1px solid var(--text-color);
+  border-top: 1px solid var(--bg-color);
 }
 
 .footer-menu__item__link {
   font-size: 20px;
   font-weight: 400;
-
-  color: var(--text-color);
 }
 
 .footer__socials {
@@ -447,7 +438,7 @@ footer {
   width: 100%;
   height: 113px;
 
-  border-top: 1px solid var(--text-color);
+  border-top: 1px solid var(--bg-color);
 }
 
 .footer__socials__item__img {
@@ -475,9 +466,9 @@ footer {
   align-self: end;
   justify-self: center;
 
-  border: 1px solid var(--text-color);
-  background-color: var(--text-color);
-  color: var(--bg-color);
+  border: 1px solid var(--bg-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 
   font-size: 24px;
   font-weight: 400;
@@ -493,9 +484,8 @@ footer {
 }
 
 .footer__button:hover {
-  background-color: transparent;
-  border: 1px solid var(--text-color);
-  color: var(--text-color);
+  background-color: var(--text-color);
+  color: var(--bg-color);
 }
 
 .footer__confidentiality {
@@ -515,7 +505,7 @@ footer {
   font-size: 16px;
   font-weight: 200;
 
-  color: var(--text-color);
+  color: var(--bg-color);
 
   text-decoration: underline;
 }
@@ -664,7 +654,380 @@ label span {
   color: #4e23f0;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1320px) {
+  .goods__card__title {
+    font-size: 16px;
+  }
+
+  .goods__card__subtitle {
+    font-size: 16px;
+  }
+
+  .goods__card__properties {
+    flex-wrap: wrap;
+  }
+
+  .goods__card__price {
+    font-size: 16px;
+  }
+
+  .goods__card__about {
+    font-size: 15px;
+  }
+
+  .goods__card__propertie {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1010px) {
+  .top-menu {
+    gap: 25px;
+  }
+
+  .top-menu__item__link {
+    font-size: 16px;
+  }
+
+  /* Раздел "Популярные авто" */
+
+  .goods {
+    padding: 32px 30px 0;
+  }
+
+  .goods__title {
+    font-size: 16px;
+  }
+
+  .goods__cards {
+    padding: 16px 0 0;
+  }
+
+  .goods__card {
+    padding-bottom: 16px;
+  }
+
+  .goods__card__rating {
+    top: 90px;
+  }
+
+  .goods__card__rating__img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .goods__card__rating__value {
+    font-size: 14px;
+  }
+
+  .goods__card__img {
+    width: 100%;
+    height: 131px;
+  }
+
+  .goods__card__title {
+    padding: 16px 0 8px;
+
+    font-size: 16px;
+    min-height: 60px;
+  }
+
+  .goods__card__properties {
+    flex-wrap: wrap;
+    gap: 5px;
+
+    padding: 16px 0 36px;
+    justify-content: flex-start;
+  }
+
+  .goods__card__propertie {
+    font-size: 10px;
+  }
+
+  .goods__card__footer {
+    flex-wrap: wrap;
+  }
+
+  .goods__card__price {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 21px;
+  }
+
+  .goods__card__about {
+    width: 80%;
+    padding: 10px 16px;
+
+    font-size: 16px;
+  }
+
+  .goods__card__about:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  .goods__search {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 10px;
+
+    padding: 24px 0 16px;
+  }
+
+  .goods__search__text,
+  .goods__search__value {
+    display: inline-block;
+  }
+
+  .goods__navigation {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .goods__navigation__pages {
+    display: flex;
+    gap: 5px;
+  }
+
+  .goods__navigation__pages__item {
+    font-size: 10px;
+    padding: 2px 5px;
+    cursor: pointer;
+  }
+
+  .active-page {
+    border: 1px solid var(--bg-color);
+    border-radius: 50%;
+  }
+
+  .goods__navigation__arrows {
+    display: flex;
+    gap: 8px;
+  }
+
+  .goods__navigation__arrow {
+    width: 34px;
+    cursor: pointer;
+  }
+
+  /* Footer */
+
+  footer {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: 2.5fr 1fr 1fr;
+
+    padding: 16px;
+
+    width: 100%;
+
+    color: var(--bg-color);
+  }
+
+  .footer__logo__link {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: center;
+
+    display: flex;
+    align-items: flex-end;
+
+    height: 104px;
+    padding: 16px 0;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .footer__logo__img {
+    width: 162px;
+    height: 104px;
+
+    align-self: center;
+  }
+
+  .footer-menu {
+    grid-row: 1;
+    grid-column: 2 / span 2;
+    align-self: center;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+
+    height: 104px;
+    padding: 16px 0;
+
+    margin-bottom: 16px;
+  }
+
+  .footer-menu__item {
+    padding-top: 22px;
+  }
+
+  .footer-menu__item__link {
+    font-size: 16px;
+
+    display: inline-block;
+    height: 100%;
+  }
+
+  .footer__socials {
+    grid-row: 2;
+    grid-column: 1;
+    align-self: center;
+
+    gap: 33px;
+
+    width: 100%;
+    height: 32px;
+
+    border-top: 0;
+    margin-top: 20px;
+  }
+
+  .footer__socials__item__img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer__license {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+
+    align-self: end;
+    justify-self: start;
+
+    font-size: 14px;
+
+    max-width: 200px;
+    text-align: left;
+  }
+
+  .footer__button {
+    grid-row: 2;
+    grid-column: 3;
+
+    align-self: center;
+    justify-self: end;
+
+    font-size: 16px;
+
+    width: 160px;
+    height: 40px;
+
+    padding: 4px;
+  }
+
+  .footer__confidentiality {
+    grid-row: 3;
+    grid-column: 3;
+
+    justify-items: end;
+
+    align-self: end;
+    justify-self: end;
+
+    font-size: 14px;
+  }
+
+  .footer__confidentiality__link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Header */
+  header {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    padding: 24px 40px;
+    top: 24px;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .location {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    width: 53px;
+    height: 46px;
+
+    object-fit: cover;
+  }
+
+  .hamburger-menu__list {
+    top: 100px;
+    left: 30px;
+  }
+
+  .hamburger-menu__item {
+    font-size: 15px;
+  }
+
+  .top-menu {
+    display: none;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .logo__link {
+    height: 80px;
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .logo__img {
+    width: 124px;
+    height: 80px;
+    align-self: center;
+  }
+
+  .feedback {
+    grid-row: 1;
+    grid-column: 3;
+
+    padding: 7px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 620px) {
+  .goods__card__title {
+    font-size: 13px;
+  }
+
+  .goods__card__subtitle {
+    font-size: 13px;
+  }
+  .goods__card__propertie {
+    font-size: 8px;
+  }
+
+  .goods__card__about {
+    font-size: 13px;
+  }
+
+  .separator {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 543px) {
   /* Header */
 
   header {
@@ -686,6 +1049,13 @@ label span {
 
   .hamburger-menu {
     display: block;
+    width: 24px;
+    height: 20px;
+  }
+
+  .hamburger-menu__list {
+    top: 50px;
+    left: 16px;
   }
 
   .top-menu {
@@ -718,16 +1088,6 @@ label span {
     padding: 4px;
 
     font-size: 6px;
-
-    background-color: transparent;
-    border: 1px solid var(--text-color);
-    color: var(--text-color);
-  }
-
-  .feedback:hover {
-    background-color: var(--text-color);
-    border: 1px solid var(--text-color);
-    color: var(--bg-color);
   }
 
   /* Раздел "Популярные авто" */
@@ -783,6 +1143,13 @@ label span {
   .goods__card__properties {
     padding: 16px 0;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 3px;
+  }
+
+  .separator {
+    width: 6px;
+    height: 6px;
   }
 
   .goods__card__propertie {
