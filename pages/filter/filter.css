@@ -880,7 +880,7 @@ footer {
   color: var(--text-color);
 
   width: 584px;
-  height: 611px;
+  min-height: 720px;
 
   border-radius: 10px;
 
@@ -956,7 +956,7 @@ footer {
   min-height: 116px;
 }
 
-label span {
+.popup__text {
   display: block;
 
   font-size: 16px;
@@ -982,12 +982,27 @@ label span {
   color: #000000;
 
   cursor: pointer;
+
+  margin-top: 34px;
 }
 
 .popup__button:hover,
 .popup2__button:hover {
   background-color: transparent;
   color: var(--text-color);
+}
+
+.communication-type__container {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.communication-type__value,
+.communication-type__text {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: bottom;
 }
 
 .hidden {
@@ -1416,7 +1431,7 @@ label span {
     font-size: 10px;
   }
 
-  label span {
+  .popup__text {
     font-size: 10px;
 
     margin-bottom: 16px;
@@ -1875,7 +1890,7 @@ label span {
   .popup__container,
   .popup2__container {
     width: 290px;
-    height: 544px;
+    min-height: 600px;
 
     font-size: 10px;
   }
@@ -1887,7 +1902,7 @@ label span {
     font-size: 10px;
   }
 
-  label span {
+  .popup__text {
     font-size: 10px;
 
     margin-bottom: 16px;

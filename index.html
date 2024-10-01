@@ -84,9 +84,9 @@
                 <div class="company__images">
                     <img class="company__images__arrow__back" src="./images/arrow_back_light.svg" alt="arrow back">
                     <img class="company__images__arrow__next" src="./images/arrow_next_light.svg" alt="arrow back">
-                    <img class="company__image" src="./images/company_1.svg" alt="auto picture">
-                    <img class="company__image" src="./images/company_2.svg" alt="auto picture">
-                    <img class="company__image" src="./images/company_3.svg" alt="auto picture">
+                    <img class="company__image" src="./images/1.jpg" alt="auto picture">
+                    <img class="company__image" src="./images/2.jpg" alt="auto picture">
+                    <img class="company__image" src="./images/3.jpg" alt="auto picture">
                 </div>
             </section>
             <!-- Раздел "Почему мы" -->
@@ -458,9 +458,24 @@
                     <input type="text" name="email" class="popup__content__item email" placeholder="Email" />
                 </label>
                 <label>
-                    <span>Какой автомобиль Вас интересует?</span>
+                    <span class="popup__text">Какой автомобиль Вас интересует?</span>
                     <textarea type="text" name="details" class="popup__content__item details"
                         placeholder="Марка, модель, год, пробег, комплектация и бюджет"></textarea>
+                </label>
+                <label>
+                    <h5 class="popup__text">Удобный способ связи:</h5>
+                    <div class="communication-type__container">
+                        <input type="radio" name="communication-type__value" class="communication-type" />
+                        <span name="communication-type__text">По телефону</span>
+                    </div>
+                    <div class="communication-type__container">
+                        <input type="radio" name="communication-type__value" class="communication-type" />
+                        <span name="communication-type__text">WhatsApp</span>
+                    </div>
+                    <div class="communication-type__container">
+                        <input type="radio" name="communication-type__value" class="communication-type" />
+                        <span name="communication-type__text">Telegram</span>
+                    </div>
                 </label>
                 <button class="popup__button" type="submit">Отправить</button>
             </form>
@@ -485,9 +500,24 @@
                     <input type="text" name="email" class="popup2__content__item email" placeholder="Email" />
                 </label>
                 <label>
-                    <span>Напишите свой вопрос в поле ниже</span>
+                    <span class="popup__text">Напишите свой вопрос в поле ниже</span>
                     <textarea type="text" name="details" class="popup2__content__item details"
                         placeholder="Комментарий"></textarea>
+                </label>
+                <label>
+                    <h5 class="popup__text">Удобный способ связи:</h5>
+                    <div class="communication-type__container">
+                        <input type="radio" name="communication-type__value" class="communication-type" />
+                        <span name="communication-type__text">По телефону</span>
+                    </div>
+                    <div class="communication-type__container">
+                        <input type="radio" name="communication-type__value" class="communication-type" />
+                        <span name="communication-type__text">WhatsApp</span>
+                    </div>
+                    <div class="communication-type__container">
+                        <input type="radio" name="communication-type__value" class="communication-type" />
+                        <span name="communication-type__text">Telegram</span>
+                    </div>
                 </label>
                 <button class="popup2__button" type="submit">Отправить</button>
             </form>

@@ -273,14 +273,30 @@
                     <input type="text" name="email" class="popup__content__item email" placeholder="Email" />
                 </label>
                 <label>
-                    <span>Какой автомобиль Вас интересует?</span>
+                    <span class="popup__text">Какой автомобиль Вас интересует?</span>
                     <textarea type="text" name="details" class="popup__content__item details"
                         placeholder="Марка, модель, год, пробег, комплектация и бюджет"></textarea>
+                </label>
+                <label>
+                    <h5 class="popup__text">Удобный способ связи:</h5>
+                    <div class="communication-type__container">
+                        <input type="radio" name="communication-type__value" class="communication-type" />
+                        <span name="communication-type__text">По телефону</span>
+                    </div>
+                    <div class="communication-type__container">
+                        <input type="radio" name="communication-type__value" class="communication-type" />
+                        <span name="communication-type__text">WhatsApp</span>
+                    </div>
+                    <div class="communication-type__container">
+                        <input type="radio" name="communication-type__value" class="communication-type" />
+                        <span name="communication-type__text">Telegram</span>
+                    </div>
                 </label>
                 <button class="popup__button" type="submit">Отправить</button>
             </form>
         </div>
     </div>
+
     <!-- Задать вопрос -->
     <div class="popup2 hidden">
         <div class="popup2__container">
@@ -299,9 +315,24 @@
                     <input type="text" name="email" class="popup2__content__item email" placeholder="Email" />
                 </label>
                 <label>
-                    <span>Напишите свой вопрос в поле ниже</span>
+                    <span class="popup__text">Напишите свой вопрос в поле ниже</span>
                     <textarea type="text" name="details" class="popup2__content__item details"
                         placeholder="Комментарий"></textarea>
+                </label>
+                <label>
+                    <h5 class="popup__text">Удобный способ связи:</h5>
+                    <div class="communication-type__container">
+                        <input type="radio" name="communication-type__value" class="communication-type" />
+                        <span name="communication-type__text">По телефону</span>
+                    </div>
+                    <div class="communication-type__container">
+                        <input type="radio" name="communication-type__value" class="communication-type" />
+                        <span name="communication-type__text">WhatsApp</span>
+                    </div>
+                    <div class="communication-type__container">
+                        <input type="radio" name="communication-type__value" class="communication-type" />
+                        <span name="communication-type__text">Telegram</span>
+                    </div>
                 </label>
                 <button class="popup2__button" type="submit">Отправить</button>
             </form>

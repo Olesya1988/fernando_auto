@@ -557,10 +557,8 @@ footer {
 }
 
 /* Форма обратной связи */
-
 .popup,
-.popup2,
-.popup3 {
+.popup2 {
   position: fixed;
 
   top: 0;
@@ -584,7 +582,7 @@ footer {
   color: var(--text-color);
 
   width: 584px;
-  height: 611px;
+  min-height: 720px;
 
   border-radius: 10px;
 
@@ -597,8 +595,7 @@ footer {
 }
 
 .popup__close,
-.popup2__close,
-.popup3__close {
+.popup2__close {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -661,7 +658,7 @@ footer {
   min-height: 116px;
 }
 
-label span {
+.popup__text {
   display: block;
 
   font-size: 16px;
@@ -687,6 +684,8 @@ label span {
   color: #000000;
 
   cursor: pointer;
+
+  margin-top: 34px;
 }
 
 .popup__button:hover,
@@ -695,17 +694,17 @@ label span {
   color: var(--text-color);
 }
 
-.popup3 .text-review {
-  width: 1122px;
-
-  padding: 24px;
-
-  border-radius: 10px;
-  position: relative;
+.communication-type__container {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
 }
 
-.popup3 .reviews__card__images__item {
-  width: 49%;
+.communication-type__value,
+.communication-type__text {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: bottom;
 }
 
 .hidden {
@@ -714,6 +713,10 @@ label span {
 
 .selected {
   color: #4e23f0;
+}
+
+.active {
+  z-index: 100;
 }
 
 @media (max-width: 1070px) {
@@ -998,7 +1001,7 @@ label span {
     font-size: 10px;
   }
 
-  label span {
+  .popup__text {
     font-size: 10px;
 
     margin-bottom: 16px;
@@ -1294,7 +1297,7 @@ label span {
   .popup2__container,
   .popup3__container {
     width: 290px;
-    height: 544px;
+    min-height: 600px;
 
     font-size: 10px;
   }
@@ -1306,7 +1309,7 @@ label span {
     font-size: 10px;
   }
 
-  label span {
+  .popup__text {
     font-size: 10px;
 
     margin-bottom: 16px;

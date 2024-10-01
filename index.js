@@ -364,3 +364,11 @@ reviewsArrowNext.addEventListener('click', () => {
   }
   reviewsCardsArray[counterReviews].classList.add('active');
 })
+
+// Согласие с cookie
+const cookieButton = document.querySelector('.intro__cookie__button');
+const cookie = document.querySelector('.intro__cookie');
+
+cookieButton.addEventListener('click', () => {
+  cookie.classList.add("hidden");
+})
