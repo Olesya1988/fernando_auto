@@ -60,18 +60,23 @@ const data = {
 const chooseCountryButton = document.querySelector(".choose__country");
 const chooseBrandButton = document.querySelector(".brands__content");
 const chooseModelButton = document.querySelector(".models__content");
+const chooseYearButton = document.querySelector(".years__content");
 const countriesList = document.querySelector(".countries__list");
 const brandsContainer = document.querySelector(".brands__container");
 const brandsList = document.querySelector(".brands__list");
 const brandText = document.querySelector(".brand__text");
 const modelsList = document.querySelector(".models__list");
 const modelText = document.querySelector(".model__text");
+const yearText = document.querySelector(".year__text");
 const countryArrowDown = document.querySelector(".country__arrow__down");
 const countryArrowUp = document.querySelector(".country__arrow__up");
 const brandArrowDown = document.querySelector(".brand__arrow__down");
 const brandArrowUp = document.querySelector(".brand__arrow__up");
 const modelArrowDown = document.querySelector(".model__arrow__down");
 const modelArrowUp = document.querySelector(".model__arrow__up");
+const yearsList = document.querySelector(".years__list");
+const yearArrowDown = document.querySelector(".years__arrow__down");
+const yearArrowUp = document.querySelector(".years__arrow__up");
 
 // Генерируем список стран
 data.countries.forEach((country) => {
@@ -149,6 +154,7 @@ search.addEventListener("input", (ev) => {
 const countries = Array.from(document.querySelectorAll(".country"));
 const brands = Array.from(document.querySelectorAll(".brand"));
 let models = Array.from(document.querySelectorAll(".model"));
+const years = Array.from(document.querySelectorAll(".year"));
 
 // По клику на страну появляется/исчезает список всех стран, меняется цвет текста и вид иконки стрелки
 chooseCountryButton.addEventListener("click", () => {
@@ -170,6 +176,13 @@ chooseModelButton.addEventListener("click", () => {
   modelsList.classList.toggle("hidden");
   modelArrowDown.classList.toggle("hidden");
   modelArrowUp.classList.toggle("hidden");
+});
+
+// По клику на год выпуска появляется/исчезает список всех годов, меняется вид иконки стрелки
+chooseYearButton.addEventListener("click", () => {
+  yearsList.classList.toggle("hidden");
+  yearArrowDown.classList.toggle("hidden");
+  yearArrowUp.classList.toggle("hidden");
 });
 
 // По клику на конкретную страну она отображается в заголовке
@@ -210,6 +223,13 @@ brands.forEach((item) => {
 models.forEach((item) => {
   item.addEventListener("click", () => {
     modelText.textContent = item.textContent;
+  });
+});
+
+// По клику на конкретный год он отображается в заголовке
+years.forEach((item) => {
+  item.addEventListener("click", () => {
+    yearText.textContent = item.textContent;
   });
 });
 
@@ -363,6 +383,32 @@ reviewsArrowNext.addEventListener('click', () => {
     counterReviews = 0;
   }
   reviewsCardsArray[counterReviews].classList.add('active');
+})
+
+// Слайдер раздела, где можно оставить заявку
+const applicationArrowBack = document.querySelector('.application-form__img__arrow__back');
+const applicationArrowNext = document.querySelector('.application-form__img__arrow__next');
+
+
+const applicationImgArray = document.querySelectorAll('.application-form__img');
+let counterApplication = 0;
+applicationImgArray[counterApplication].classList.add('active');
+applicationArrowBack.addEventListener('click', () => {
+  applicationImgArray.forEach(el => el.classList.remove('active'));
+  counterApplication = counterApplication - 1;
+  if (counterApplication === -1) {
+    counterApplication = applicationImgArray.length - 1;
+  }
+  applicationImgArray[counterApplication].classList.add('active');
+})
+
+applicationArrowNext.addEventListener('click', () => {
+  applicationImgArray.forEach(el => el.classList.remove('active'));
+  counterApplication = counterApplication + 1;
+  if (counterApplication === 3) {
+    counterApplication = 0;
+  }
+  applicationImgArray[counterApplication].classList.add('active');
 })
 
 // Согласие с cookie

@@ -420,7 +420,7 @@ header {
 .advantages__container {
   display: grid;
 
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 
   gap: 30px;
@@ -466,7 +466,7 @@ header {
 
 .advantage__application-form {
   grid-row: 2;
-  grid-column: 3 / span 2;
+  grid-column: 2 / span 2;
 
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -729,7 +729,8 @@ header {
 
 .country,
 .brand,
-.model {
+.model,
+.year {
   font-size: 20px;
   font-weight: 200;
   padding: 4px 0 4px 8px;
@@ -739,7 +740,8 @@ header {
 
 .country:hover,
 .brand:hover,
-.model:hover {
+.model:hover,
+.year:hover {
   color: #4e23f0;
 }
 
@@ -859,6 +861,29 @@ header {
   overflow-y: scroll;
 
   padding: 5px;
+}
+
+.years__list {
+  position: absolute;
+
+  top: 60px;
+  right: 0;
+
+  z-index: 10;
+
+  width: 100%;
+  height: 120px;
+
+  border-radius: 10px;
+  outline: 1px solid #000000;
+
+  background-color: var(--text-color);
+
+  overflow-y: scroll;
+
+  padding: 5px;
+
+  z-index: 102;
 }
 
 .filter__item__inputs {
@@ -1016,21 +1041,21 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 40px;
 
   width: 48%;
+
+  position: relative;
 }
 
 .application-form__title {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 600;
 }
 
 .application-form__subtitle {
-  display: block;
-
+  font-size: 30px;
   font-weight: 400;
-
-  padding-top: 32px;
 }
 
 .application-form__content__button {
@@ -1054,8 +1079,47 @@ header {
   color: var(--text-color);
 }
 
-.application-form__img {
+.application-form__img__contaiter {
   width: 48%;
+  position: relative;
+}
+
+.application-form__img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.application-form__img__arrow__back,
+.application-form__img__arrow__next {
+  position: absolute;
+
+  top: 45%;
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--text-color);
+
+  border-radius: 50%;
+  padding: 10px;
+
+  cursor: pointer;
+
+  box-shadow: 4px 4px 39px 0px rgba(34, 60, 80, 0.2);
+  z-index: 200;
+}
+
+.application-form__img__arrow__back {
+  left: 0;
+}
+
+.application-form__img__arrow__next {
+  right: 0;
 }
 
 /* Раздел "Отзывы" */
@@ -1578,7 +1642,6 @@ footer {
     font-size: 16px;
     font-weight: 500;
     padding: 24px;
-    height: 156px;
   }
 
   .advantage__application-form .advantage__title {
@@ -1631,7 +1694,7 @@ footer {
 
     height: 530px;
   }
-  
+
   .goods__cards {
     padding: 16px 0 27px;
   }
@@ -1683,6 +1746,22 @@ footer {
     background-color: transparent;
     color: var(--text-color);
   }
+
+  /* Раздел, где можно оставить заявку */
+
+  .application-form__title {
+    font-size: 25px;
+  }
+
+  .application-form__subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .application-form__subtitle {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 1010px) {
@@ -1724,13 +1803,13 @@ footer {
     padding: 80px;
   }
 
-  .application-form__title {
+  /* .application-form__title {
     font-size: 16px;
   }
 
   .application-form__subtitle {
     padding: 16px 0;
-  }
+  } */
 
   .application-form__content__button {
     width: 253px;
@@ -2074,7 +2153,8 @@ footer {
 
   .country,
   .brand,
-  .model {
+  .model,
+  .year {
     font-size: 16px;
   }
 
@@ -2102,6 +2182,14 @@ footer {
     right: 0;
   }
 
+  .years__list {
+    width: 100%;
+    height: 100px;
+
+    top: 60px;
+    right: 0;
+  }
+
   .filter__item__input {
     font-size: 16px;
   }
@@ -2122,6 +2210,18 @@ footer {
 
   .application-form {
     padding: 32px 30px;
+  }
+
+  .application-form__content {
+    gap: 20px;
+  }
+
+  .application-form__title {
+    font-size: 16px;
+  }
+
+  .application-form__subtitle {
+    font-size: 14px;
   }
 
   /* Раздел "Отзывы" */
@@ -2197,12 +2297,12 @@ footer {
   }
 
   .communication-type__value,
-.communication-type__text {
-  display: inline-block;
-  font-size: 16px;
-  vertical-align: bottom;
-  margin-bottom: 0;
-}
+  .communication-type__text {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: bottom;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 543px) {
@@ -2493,7 +2593,8 @@ footer {
 
   .country,
   .brand,
-  .model {
+  .model,
+  .year {
     font-size: 10px;
   }
 
@@ -2535,6 +2636,14 @@ footer {
     right: 0;
 
     width: 100%;
+  }
+
+  .years__list {
+    top: 35px;
+    right: 0;
+
+    width: 100%;
+    height: 70px;
   }
 
   .filter__item__input {
@@ -2628,6 +2737,7 @@ footer {
 
   .application-form__content {
     flex-wrap: wrap;
+    gap: 10px;
 
     width: 100%;
   }
@@ -2638,8 +2748,6 @@ footer {
 
   .application-form__subtitle {
     font-size: 12px;
-
-    padding: 8px 0;
   }
 
   .application-form__buttons {
@@ -2647,10 +2755,6 @@ footer {
   }
 
   .application-form__content__button {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 10px;
     width: 140px;
   }
@@ -2664,8 +2768,14 @@ footer {
     color: var(--text-color);
   }
 
-  .application-form__img {
+  .application-form__img__contaiter {
     width: 100%;
+    height: 300px;
+
+    margin-top: 20px;
+  }
+
+  .application-form__img {
     border-radius: 10px;
   }
 

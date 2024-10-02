@@ -1,25 +1,32 @@
 // Определяем переменные
+
+// Тип клиента
 const clientTypesToggle = document.querySelector(".client-types-toggle");
 const clientTypesList = document.querySelector(".client-types__list");
-
 const clientTypesArrowDown = document.querySelector(
   ".client-type__arrow__down"
 );
 const clientTypesArrowUp = document.querySelector(".client-type__arrow__up");
-
 const clientTypes = Array.from(document.querySelectorAll(".client-type"));
 
+// Вид топлива
 const fuelTypesToggle = document.querySelector(".fuel-types-toggle");
 const fuelTypesContainer = document.querySelector(".fuel-types__container");
 const fuelTypesList = document.querySelector(".fuel-types__list");
-
-
 const fuelTypesArrowDown = document.querySelector(
   ".fuel-type__arrow__down"
 );
 const fuelTypesArrowUp = document.querySelector(".fuel-type__arrow__up");
-
 const fuelTypes = Array.from(document.querySelectorAll(".fuel-type"));
+
+// Год выпуска
+const yearToggle = document.querySelector(".year-toggle");
+const yearList = document.querySelector(".year__list");
+const yearArrowDown = document.querySelector(
+  ".year__arrow__down"
+);
+const yearArrowUp = document.querySelector(".year__arrow__up");
+const years = Array.from(document.querySelectorAll(".year"));
 
 
 // Событие появления/скрытия списка типов лиц
@@ -76,6 +83,20 @@ search.addEventListener("input", (ev) => {
     } else {
       el.classList.remove("hidden");
     }
+  });
+});
+
+// Событие появления/скрытия списка годов выпуска
+yearToggle.addEventListener("click", () => {
+  yearList.classList.toggle("hidden");
+  yearArrowDown.classList.toggle("hidden");
+  yearArrowUp.classList.toggle("hidden");
+});
+
+// По клику на конкретный год он отображается в списке
+years.forEach((year) => {
+  year.addEventListener("click", () => {
+    yearToggle.textContent = year.textContent;
   });
 });
 

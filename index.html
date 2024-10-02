@@ -93,12 +93,12 @@
             <section class="advantages">
                 <h3 class="advantages__title">почему мы?</h3>
                 <div class="advantages__container">
-                    <div class="advantage advantage__general">Компания Fernando Auto выделяется на рынке благодаря
+                    <!-- <div class="advantage advantage__general">Компания Fernando Auto выделяется на рынке благодаря
                         нескольким ключевым факторам, которые делают её привлекательной для клиентов. Мы уделяем особое
                         внимание качеству обслуживания. Наша команда профессионалов всегда готова предоставить клиентам
                         исчерпывающую информацию о каждом автомобиле, помочь с выбором и ответить на любые вопросы.
                         Это создаёт атмосферу доверия и уверенности у наших клиентов. Кроме того, индивидуальный подход
-                        к каждому клиенту является нашей визитной карточкой.</div>
+                        к каждому клиенту является нашей визитной карточкой.</div> -->
                     <div class="advantage">
                         <h4 class="advantage__title">Широкий выбор</h4>
                         <div class="advantage__text">Мы импортируем автомобили различных марок и моделей, чтобы
@@ -246,13 +246,30 @@
                             <ul class="models__list hidden"></ul>
                         </div>
                     </div>
-                    <label class="filter__item">
+                    <div class="filter__item years">
+                        <div class="filter__item__title">Год выпуска</div>
+                        <div class="filter__item__content years__content">
+                            <div class="filter__text year__text">Меньше 3 лет</div>
+                            <div class="filter__arrows">
+                                <img class="filter__arrow years__arrow__down" src="./images/arrow_down.svg"
+                                    alt="Стрелка вниз">
+                                <img class="filter__arrow hidden years__arrow__up" src="./images/arrow_up.svg"
+                                    alt="Стрелка вверх">
+                            </div>
+                            <ul class="years__list hidden">
+                                <li class="year">Меньше 3 лет</li>
+                                <li class="year">3-5 лет</li>
+                                <li class="year">5-7 лет</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <label class="filter__item">
                         <h5 class="filter__item__title">Год выпуска</h5>
                         <div class="filter__item__inputs">
                             <input class="filter__item__input" type="text" placeholder="От">
                             <input class="filter__item__input" type="text" placeholder="До">
                         </div>
-                    </label>
+                    </label> -->
                     <label class="filter__item">
                         <h5 class="filter__item__title">Цена</h5>
                         <div class="filter__item__inputs">
@@ -300,13 +317,19 @@
                 <div class="application-form__content">
                     <div class="application-form__title">
                         Оставьте заявку на персональный подбор машины вашей мечты
-                        <span class="application-form__subtitle">Укажите бюджет и параметры интересующей вас машины,
-                            наши сотрудники подберут и отправят лучшие предложения по вашему запросу. Вам останется
-                            только выбрать и заключить договор.</span>
                     </div>
+                    <div class="application-form__subtitle">Укажите бюджет и параметры интересующей вас машины,
+                        наши сотрудники подберут и отправят лучшие предложения по вашему запросу. Вам останется
+                        только выбрать и заключить договор.</div>
                     <button class="application-form__content__button order">Оставить заявку</button>
                 </div>
-                <img class="application-form__img" src="./images/application-form.svg" alt="mazda auto image">
+                <div class="application-form__img__contaiter">
+                    <img class="application-form__img" src="./images/1.jpg" alt="auto image">
+                    <img class="application-form__img" src="./images/2.jpg" alt="auto image">
+                    <img class="application-form__img" src="./images/3.jpg" alt="auto image">
+                    <img class="application-form__img__arrow__back" src="./images/arrow_back.svg" alt="arrow back">
+                    <img class="application-form__img__arrow__next" src="./images/arrow_next.svg" alt="arrow next">
+                </div>
             </section>
             <!-- Раздел "Отзывы" -->
             <section class="reviews">

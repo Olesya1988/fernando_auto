@@ -59,16 +59,12 @@
             <!-- Раздел с калькулятором -->
             <section class="calculator">
                 <div class="calculator__title">
-                    <div class="calculator__title__item">калькулятор авто с аукциона</div>
-                    <div class="calculator__title__item country">японии</div>
-                    <div class="calculator__title__item">под полную пошлину</div>
+                    <div class="calculator__title__item">калькулятор авто под полную пошлину из</div>
+                    <div class="calculator__title__item country">кореи</div>                    
                 </div>
                 <div class="calculator__description">
-                    Заполните поля ниже и калькулятор рассчитает среднюю стоимость авто с аукциона Японии под полную
-                    пошлину с учётом доставки до вашего города.
-                    Автомобили 2007 года и старше запрещены к ввозу под полную пошлину с выдачей ПТС.<br>
-                    Такие автомобили ввозятся как запчасти либо под ваш ПТС — для этого у нас есть отдельный калькулятор
-                    распилы/конструктора.
+                    Заполните поля ниже, и калькулятор рассчитает среднюю стоимость авто под полную
+                    пошлину с учётом доставки до вашего города.                   
                 </div>
                 <div class="calculator__content">
                     <div class="calculator__data">
@@ -79,16 +75,16 @@
                         <div class="calculator__data__item client-types">
                             <div class="calculator__data__item__title">Тип клиента</div>
                             <div class="calculator__data__item__value client-types-toggle">Физическое лицо</div>
-                            <ul class="client-types__list hidden">
+                            <!-- <ul class="client-types__list hidden">
                                 <li class="client-type">Физическое лицо</li>
                                 <li class="client-type">Юридическое лицо</li>
-                            </ul>
-                            <div class="arrows">
+                            </ul> -->
+                            <!-- <div class="arrows">
                                 <img class="arrow client-type__arrow__down" src="../../images/arrow_down.svg"
                                     alt="Стрелка вниз">
                                 <img class="arrow client-type__arrow__up hidden" src="../../images/arrow_up_dark.svg"
                                     alt="Стрелка вверх">
-                            </div>
+                            </div> -->
                         </div>
                         <div class="calculator__data__item fuel-types">
                             <div class="calculator__data__item__title">Тип топлива</div>
@@ -99,8 +95,7 @@
                                 <ul class="fuel-types__list">
                                     <li class="fuel-type">Бензин</li>
                                     <li class="fuel-type">Дизель</li>
-                                    <li class="fuel-type">Турбодизель</li>
-                                    <li class="fuel-type">Электрический мотор</li>
+                                    <li class="fuel-type">Гибрид</li>                                    
                                 </ul>
                             </div>
 
@@ -113,7 +108,18 @@
                         </div>
                         <div class="calculator__data__item">
                             <div class="calculator__data__item__title">Год выпуска</div>
-                            <input class="calculator__data__item__value">
+                            <div class="calculator__data__item__value year-toggle">Меньше 3 лет</div>
+                            <ul class="year__list hidden">
+                                <li class="year">Меньше 3 лет</li>
+                                <li class="year">3-5 лет</li>
+                                <li class="year">5-7 лет</li>
+                            </ul>
+                            <div class="arrows">
+                                <img class="arrow year__arrow__down" src="../../images/arrow_down.svg"
+                                    alt="Стрелка вниз">
+                                <img class="arrow year__arrow__up hidden" src="../../images/arrow_up_dark.svg"
+                                    alt="Стрелка вверх">
+                            </div>
                         </div>
                         <div class="calculator__data__item">
                             <div class="calculator__data__item__title">Объем (куб. см)</div>
@@ -129,8 +135,7 @@
                     <div class="calculator__result">
                         <div class="calculator__result__item exchange-rate">
                             <div class="calculator__result__item__title">Курс валют ЦБ на сегодня:</div>
-                            <div class="calculator__result__item__value">1 $ - 91,2573 ₽100 ¥
-                                100 ¥ - 58,3412 ₽</div>
+                            <div class="calculator__result__item__value">1 $ - 94,58 ₽</div>
                         </div>
                         <div class="calculator__result__item average-cost">
                             <div class="calculator__result__item__title">Средняя стоимость автомобиля во Владивостоке со
@@ -142,30 +147,30 @@
                                 <span>В зависимости от дальности аукциона</span>
                             </div>
                             <div class="calculator__result__item__value">120 600 ₽<br>
-                                200 000 ¥</div>
+                                1 275 $</div>
                         </div>
                         <div class="calculator__result__item average-expenses">
                             <div class="calculator__result__item__title">Средние расходы
                                 по Японии</div>
                             <div class="calculator__result__item__value">48 240 ₽<br>
-                                80 000 ¥</div>
+                                510 $</div>
                         </div>
                         <div class="calculator__result__item freight-fee">
-                            <div class="calculator__result__item__title">Фрахт до Владивостока
+                            <div class="calculator__result__item__title">Фрахт до Владивостока <br> *стоимость варьируется от габаритов ТС
                                 <span>Морская перевозка</span>
                             </div>
                             <div class="calculator__result__item__value">48 240 ₽<br>
-                                80 000 ¥</div>
+                                510 $</div>
                         </div>
                         <div class="calculator__result__item customs-clearance">
-                            <div class="calculator__result__item__title">Таможенное оформление
+                            <div class="calculator__result__item__title">Таможенное оформление <br> *стоимость варьируется от типа ТС
                                 <ul>
                                     <li>Разгрузка + нормативное хранение на складе (СВХ)</li>
                                     <li>Прохождение лаборатории - СБКТС, ЭПТС</li>
-                                    <li>Услуга таможенного брокера</li>
+                                    <li>Услуга таможенного брокера</li>                                    
                                 </ul>
                             </div>
-                            <div class="calculator__result__item__value">82 000 ₽</div>
+                            <div class="calculator__result__item__value">120 000 ₽</div>
                         </div>
                         <div class="calculator__result__item company-fee">
                             <div class="calculator__result__item__title">Комиссия компании Fernando Auto</div>
