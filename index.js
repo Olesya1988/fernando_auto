@@ -189,6 +189,7 @@ chooseYearButton.addEventListener("click", () => {
 countries.forEach((country) => {
   country.addEventListener("click", () => {
     chooseCountryButton.textContent = country.textContent;
+    countriesList.classList.add("hidden");
   });
 });
 

@@ -442,8 +442,7 @@ header {
   width: 50%;
 }
 
-.calculator__result__item ul {
-  font-family: Unbounded;
+.calculator__result__item ul {  
   font-size: 16px;
   font-weight: 300;
   margin-top: 24px;
@@ -451,13 +450,13 @@ header {
   padding-left: 20px;
 }
 
-.calculator__result__item span {
-  display: block;
-  font-family: Unbounded;
+.subtitle {
+  display: block;  
   font-size: 16px;
   font-weight: 300;
   margin-top: 24px;
 }
+
 .calculator__result__item li {
   list-style-type: disc;
 }

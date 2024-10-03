@@ -54,6 +54,9 @@ fuelTypesToggle.addEventListener("click", () => {
 fuelTypes.forEach((fuelType) => {
   fuelType.addEventListener("click", () => {
     fuelTypesToggle.textContent = fuelType.textContent;
+    fuelTypesContainer.classList.add("hidden");
+    fuelTypesArrowDown.classList.remove("hidden");
+    fuelTypesArrowUp.classList.add("hidden");
   });
 });
 
@@ -97,6 +100,9 @@ yearToggle.addEventListener("click", () => {
 years.forEach((year) => {
   year.addEventListener("click", () => {
     yearToggle.textContent = year.textContent;
+    yearList.classList.add("hidden");
+    yearArrowDown.classList.remove("hidden");
+    yearArrowUp.classList.add("hidden");
   });
 });
 
@@ -137,6 +143,40 @@ close2.addEventListener("click", () => {
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const hamburgerMenuList = document.querySelector('.hamburger-menu__list');
 hamburgerMenu.addEventListener('click', () => {
-  console.log(1);
   hamburgerMenuList.classList.toggle('hidden');
+})
+
+// Расчёт стоимости
+const calculatorButton = document.querySelector('.calculator__button');
+const calculatorResult = document.querySelector('.calculator__result');
+
+const exchangeRateUsd = document.querySelector('.exchange-rate__usd');
+const exchangeRateEuro = document.querySelector('.exchange-rate__euro');
+
+const price = document.querySelector('.price');
+const auctionPriceValue = document.querySelector('.auction-price__value');
+
+calculatorButton.addEventListener('click', () => {
+  calculatorResult.classList.remove('hidden');
+
+  auctionPriceValue.textContent = price.value;
+
+  fetch('https://iss.moex.com/iss/statistics/engines/currency/markets/selt/rates.json?iss.meta=off')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('HTTP error, status = ' + response.status);
+      }
+      return response.json();
+    })
+    .then((json) => {
+      // Текущий курс доллара ЦБРФ
+      console.log(json.cbrf.data[0][json.cbrf.columns.indexOf('CBRF_USD_LAST')]);
+      console.log(json.cbrf.data[0][json.cbrf.columns.indexOf('CBRF_EUR_LAST')]);
+      exchangeRateUsd.textContent = Number(json.cbrf.data[0][json.cbrf.columns.indexOf('CBRF_USD_LAST')]).toFixed(2);
+      exchangeRateEuro.textContent = Number(json.cbrf.data[0][json.cbrf.columns.indexOf('CBRF_EUR_LAST')]).toFixed(2);
+
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 })

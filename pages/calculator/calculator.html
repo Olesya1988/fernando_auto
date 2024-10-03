@@ -69,8 +69,8 @@
                 <div class="calculator__content">
                     <div class="calculator__data">
                         <div class="calculator__data__item">
-                            <div class="calculator__data__item__title">Аукционная стоимость (иены)</div>
-                            <input class="calculator__data__item__value">
+                            <div class="calculator__data__item__title">Аукционная стоимость ($)</div>
+                            <input class="calculator__data__item__value price">
                         </div>
                         <div class="calculator__data__item client-types">
                             <div class="calculator__data__item__title">Тип клиента</div>
@@ -132,35 +132,36 @@
                         <button type="submit" class="calculator__button">Рассчитать</button>
                     </div>
 
-                    <div class="calculator__result">
+                    <div class="calculator__result hidden">
                         <div class="calculator__result__item exchange-rate">
                             <div class="calculator__result__item__title">Курс валют ЦБ на сегодня:</div>
-                            <div class="calculator__result__item__value">1 $ - 94,58 ₽</div>
+                            <div class="calculator__result__item__value">1 $ - <span class="exchange-rate__usd">95,64</span> ₽<br>1 € - <span class="exchange-rate__euro">95,64</span> €</div>
                         </div>
                         <div class="calculator__result__item average-cost">
                             <div class="calculator__result__item__title">Средняя стоимость автомобиля во Владивостоке со
                                 всеми расходами:</div>
-                            <div class="calculator__result__item__value">419 352 ₽</div>
+                            <div class="calculator__result__item__value">
+                                <span class="average-cost__value">4 384</span> $</div>
                         </div>
                         <div class="calculator__result__item auction-price">
                             <div class="calculator__result__item__title">Стоимость на аукционе:
-                                <span>В зависимости от дальности аукциона</span>
+                                <span class="subtitle">В зависимости от дальности аукциона</span>
                             </div>
-                            <div class="calculator__result__item__value">120 600 ₽<br>
-                                1 275 $</div>
+                            <div class="calculator__result__item__value">
+                                <span class="auction-price__value"></span> $</div>
                         </div>
                         <div class="calculator__result__item average-expenses">
                             <div class="calculator__result__item__title">Средние расходы
                                 по Японии</div>
-                            <div class="calculator__result__item__value">48 240 ₽<br>
-                                510 $</div>
+                            <div class="calculator__result__item__value">
+                                <span class="average-expenses__value">504</span> $</div>
                         </div>
                         <div class="calculator__result__item freight-fee">
                             <div class="calculator__result__item__title">Фрахт до Владивостока <br> *стоимость варьируется от габаритов ТС
-                                <span>Морская перевозка</span>
+                                <span class="subtitle">Морская перевозка</span>
                             </div>
-                            <div class="calculator__result__item__value">48 240 ₽<br>
-                                510 $</div>
+                            <div class="calculator__result__item__value">
+                                <span class="freight-fee__value">504</span> $</div>
                         </div>
                         <div class="calculator__result__item customs-clearance">
                             <div class="calculator__result__item__title">Таможенное оформление <br> *стоимость варьируется от типа ТС
@@ -170,34 +171,34 @@
                                     <li>Услуга таможенного брокера</li>                                    
                                 </ul>
                             </div>
-                            <div class="calculator__result__item__value">120 000 ₽</div>
+                            <div class="calculator__result__item__value"><span class="customs-clearance__value">857</span> $</div>
                         </div>
                         <div class="calculator__result__item company-fee">
                             <div class="calculator__result__item__title">Комиссия компании Fernando Auto</div>
-                            <div class="calculator__result__item__value">50 000 ₽</div>
+                            <div class="calculator__result__item__value"><span class="company-fee__value">523</span> $</div>
                         </div>
                         <div class="calculator__result__item laboratory-fee">
                             <div class="calculator__result__item__title">Перемещение авто из порта с прохождением
                                 лаборатории</div>
-                            <div class="calculator__result__item__value">5 000 ₽</div>
+                            <div class="calculator__result__item__value"><span class="laboratory-fee__value">52</span> $</div>
                         </div>
                         <div class="calculator__result__item customs-fee">
                             <div class="calculator__result__item__title">Таможенные платежи:
                                 <ul>
-                                    <li>Сборы за таможенное оформление: 775 ₽</li>
+                                    <li>Сборы за таможенное оформление: <span class="execution__value">8</span> $</li>
                                     </li>
-                                    <li>Пошлина (на физ.лицо): 59 297 ₽</li>
+                                    <li>Пошлина (на физ.лицо): <span class="tax__value">620</span> $</li>
                                 </ul>
                             </div>
-                            <div class="calculator__result__item__value">60 072 ₽</div>
+                            <div class="calculator__result__item__value"><span class="customs-fee__value">628</span> $</div>
                         </div>
                         <div class="calculator__result__item utilization-fee">
                             <div class="calculator__result__item__title">Утилизационный сбор:</div>
-                            <div class="calculator__result__item__value">5 200 ₽</div>
+                            <div class="calculator__result__item__value"><span class="utilization-fee__value">55</span> $</div>
                         </div>
                         <div class="calculator__result__item total">
                             <div class="calculator__result__item__title">Итого:</div>
-                            <div class="calculator__result__item__value">419 352 ₽</div>
+                            <div class="calculator__result__item__value"><span class="total__value">4384</span> $</div>
                         </div>
                         <div class="calculator__result__item comment">
                             <ul>
